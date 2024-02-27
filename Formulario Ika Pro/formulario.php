@@ -11,6 +11,8 @@
     <title>Prueba del Formulario</title>
 </head>
 <body>
+                                <!-- REGISTRO INICIAL EN LA BASE DE DATOS -->
+
   <div class="container mt-5 global_form">
     <div class=" container-fluid form_container">
       
