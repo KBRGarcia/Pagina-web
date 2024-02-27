@@ -6,7 +6,7 @@ $error = "";
 
 if (empty($_POST['Correo']) || empty($_POST['Password1'])) {
     $error = 'Rellene todos los campos correctamente.';
-    header('location: inicio_form.php?ERR=' . $error);
+    header('location: inicio_sesion.php?ERR=' . $error);
     $hay_error = true;
 } else {
     // Obtención de datos del formulario
@@ -24,7 +24,7 @@ if (empty($_POST['Correo']) || empty($_POST['Password1'])) {
     } else {
         // mensaje de error si los datos son incorrectos
         $error = 'Datos incorrectos';
-        header("Location: inicio_form.php?ERR=" . $error);
+        header("Location: inicio_sesion.php?ERR=" . $error);
         exit();
     }
 }

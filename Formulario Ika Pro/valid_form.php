@@ -8,7 +8,7 @@
     && empty($_POST['Password1']) && empty($_POST['Password2']) && empty($_POST['Direccion'])){
 
         $error = 'Rellene todo los campos idiotaa';
-        header('location:formulario.php?ERR=' . $error);
+        header('location:registro.php?ERR=' . $error);
         $hay_error=true;
 
     }else{
@@ -29,7 +29,7 @@
                 $nombre = $_POST['Nombre'];
             } else{
                 $error = "Debebe ingresar Nombre y Aprellido";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
@@ -38,7 +38,7 @@
                 $email = $_POST['Correo'];
             } else{
                 $error = "Debebe ingresar un email";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
@@ -47,13 +47,13 @@
                 $email2 = $_POST['Correo2'];
             } else{
                 $error = "Debe ingresar la confirmación del email";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
             if ($_POST['Correo'] != $_POST['Correo2']){
                 $error = "Los Correos no coinciden";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
@@ -62,7 +62,7 @@
                 $password = $_POST['Password1'];
             } else{
                 $error = "Debe ingresar una contraseña";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
@@ -71,13 +71,13 @@
                 $password2 = $_POST['Password2'];
             } else{
                 $error = "Debe confirmar que su contraseña sea igual a la ingresada con anterioridad";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
             if ($_POST['Password1'] != $_POST['Password2']){
                 $error = "Las contraseñas no coinciden";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
@@ -86,7 +86,7 @@
                 $direccion = $_POST['Direccion'];
             } else{
                 $error = "Debe ingresar la dirección de su domicilio o vivienda";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
             }
 
@@ -98,7 +98,7 @@
             if ($confir3 > 0){
                 if ($confir3['Correo'] === $email){
                     $error = "El correo electronico ya se encuentra registrado";
-                header('location:formulario.php?ERR=' . $error);
+                header('location:registro.php?ERR=' . $error);
                 $hay_error=true;
                 }
             }
