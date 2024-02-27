@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo:700");
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    font-size: 1.2em;
+    background-image: url(./The_Ghost_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    text-align: center; 
+    width: 300px;
+    animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0.5em);
+    }
+
+    to {
+        transform: translateY(-0.5em);
+    }
+}
+
+.chat-bubble {
+    position: absolute;
+    width: 100%;
+    color: white;
+    left: 50%;
+    bottom: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    margin-bottom: 5em;
+    font-family: "Chivo";
+}
+
+input {
+    background: gray;
+    font-size: 1em;
+    font-family: "Chivo";
+    padding: 1em;
+    border: none;
+    border-radius: 0.2em;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input::placeholder {
+    color: #00000080;
+}
+
+.ghost {
+    background: white;
+    color: white;
+}
+
+.ghost * {
+    transition: all 0.3s;
+}
+
+.ghost>* {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+}
+
+.torso {
+    width: 5em;
+    height: 7em;
+    background: inherit;
+    border-radius: 100px;
+    box-shadow: 0 0 12px #424242;
+    transform: translate(-50%, 50%);
+    transition: all 0.3s background 0.4s 0.1s;
+    z-index: -1;
+}
+
+.face {
+    margin-bottom: 1em;
+    background: none;
+}
+
+.face .eyes-l, .face .eyes-r {
+    width: 0.8em;
+    height: 0.8em;
+    background: #333;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0.4em;
+}
+
+.face .eyes-l {
+    right: 1em;
+}
+
+.face .eyes-r {
+    left: 1em;
+}
+
+.face .mouth {
+    width: 0.5em;
+    height: 0.3em;
+    border-radius: 50px;
+    border: 0.2em solid #333;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.face .mouth--open {
+    border-top: 0.2em solid #333;
+    height: 0.2em;
+}
+
+.hands {
+    color: inherit;
+}
+
+.hands-r, .hands-l {
+    width: 1em;
+    height: 1.5em;
+    background: white;
+    border-radius: 100px;
+    box-shadow: 0 4px 4px #3333334d;
+}
+
+.hands-r {
+    transform: translate(1.5em, 1em) rotate(15deg);
+}
+
+.hands-l {
+    transform: translate(-1.5em, 2.5em) rotate(-15deg);
+}
+
+.legs {
+    width: 5em;
+    height: 1.5em;
+    background: inherit;
+    top: 100%;
+    box-shadow: 0 0 12px #424242;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    transform: translateX(-50%) scaleY(-1); 
+}
+
+
+input:focus {
+    background: white;
+}
+
+input:focus+.ghost {
+    background: #ffffff33;
+    color: transparent;
+
+    & .torso {
+        transform: translate(-50%, 42px) scaleY(0.9);
+    }
+
+    & .eyes {
+        background: #ffffff99;
+    }
+
+    & .face {
+        transform: translate(-50%, 0.4em);
+    }
+
+    & .mouth {
+        transform: scaleY(0.6);
+        border-color: #ffffff99;
+    }
+
+    & .hands {
+        transform: translate(-50%, 0.2em);
+    }
+
+    & .hands * {
+        background: transparent;
+    }
+
+    & .legs {
+        border-top-left-radius: 2em;
+        border-top-right-radius: 0.6em;
+        transform: translate(-50%) scaleY(0.85);
+        transform-origin: top;
+    }
+}
+
+.enlace_inicio a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgb(194, 194, 194);
+    border-radius: 50%;
+    color: #111;
+    margin: 5em;
+}
+
+.enlace_inicio a:hover {
+    color: #ff1252;
+}
