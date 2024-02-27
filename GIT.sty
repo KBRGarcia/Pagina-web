@@ -1,0 +1,288 @@
+%       GIT
+
+% Curso de GIT desde CERO (Completo)
+% Soy Dalto
+
+%-------------------------------------CONFIGUARIÓN INICIAL--------------------------------
+
+%--para acceder a las configuraciones de    git
+%--por defecto, lo mas comun es ponerlo en global
+    git config --global
+    git config --system
+    git config --local
+
+%--para configurar el nombre del usuario
+    git config --global user.name "nommbre_cualquiera"
+
+%--para configurar el email
+    git config --global user.email = "ikabaru@gmail.com"
+
+%--para veer la lista de configuraciones
+    git config --list
+
+%--para ver al lista de configuraciones globales
+    git config --global --list
+
+%--para limpiar la consola
+    clear
+
+%--para acceder al editor que va a tener internamente   git en este caso para cofigurar visual estudio code se usa "code--wait"
+   git config --global core.editor "code--wait"
+
+%--para configurar el color de la interfaz
+   git config --global color.ui true
+
+%--para configurar como subir y bajar archivos del servidor para evitar conflictos y problemas y que pueda ser compatibles en todos los dispositivos
+   git config --global core.autocrlf
+
+%--si estoy en windows sería
+   git config --global core.autocrlf true
+
+%--si estay en linux, unix o mac sería
+    git config --global core.autocrlf input
+
+%--para seleccionar una carpeta dentro de la computadora
+    cd ruta/de/carpeta
+
+%--para regresar a la ruta de la carpeta anterior
+    cd ../
+
+%--para crear un repositorio tiene que ser en un disco de la computadora
+    cd c:
+
+%--para crear una carpeta donde va a estar el repositorio depues de seleccionar el lugar donde va a ir ubicado
+    mkdir nombre_carpeta
+
+%--para eliminar una carpeta
+    rmdir nombre_carpeta
+
+%--para inicializar git
+    git init
+
+%--para ver los archivos dentro de una carpeta
+    ls
+
+%--para ver la ruta donde estamos ubicados
+    pwd
+
+%--para ver los archivos ocultos
+    ls -a
+
+%--para abrir el Visual estudio en la carpeta que estas posicionado
+   code .
+
+%-------------------------------------ADD y COMMIT--------------------------------
+
+%--para subir los todos los archivos al area de preparacion para luego ser subido a     git
+   git add .
+
+%--para subir un archivo en específico al area de preparacion para luego ser subido a   git
+   git add nombre_archivo.extencion
+
+%--para mostrate informacion de tu area de trabajo y el area de preparacion
+   git status
+
+%--para remover los archivos del area de preparacion
+   git rm -- cached nombre_archivo.extencion
+
+%--para subirlo al repositorio
+   git commit
+
+%--para subirlo al repositorio pero con un comentario corto
+   git commit -m "agregando comentario predeterminado" -a
+
+%--para subir todo al repositorio sin tener que agregarlo al area de preparacion
+   git commit -a
+
+%-------------------------------------RESTORE y CHECKOUT y MAS--------------------------------
+ 
+%--para recuperar un archivo que eliminaste del repositorio
+   git restore nombre_archivo.extencion
+
+%--para devolver los datos del archivo a la version que se encuentra en el repositorio o la ultima vez que guardaste los cambios
+   git checkout nombre_archivo.extencion
+
+%--para dehacer cambios
+    git reset --hard
+
+%--para cambiar los nombres de los archivos
+   git mv nombre_viejo.extencion nombre_nuevo.extencion
+
+%--version resumida de  git status
+   git status -s
+
+%-------------------------------------DIFF--------------------------------
+
+-%-para que muestre toda la informacion de un archivo dentro del repositorio
+   git show nombre_archivo.extencion
+
+%--para mostrar la diferencia entre un archivo que se encuentra dentro del area de preparacion y el que se encuentra dentro del repositorio
+   git diff --staged 
+
+%-- para obtener la identificacion del COMMIT
+   git log
+
+%-- para obtener la identificacion del COMMIT pero es la version resumida
+   git log --oneline
+
+%-- para configurar los comandos y usar un alias simplificado y facilitar los comandos
+   git config --global alias.nombre_alias "comando_completo_de_ git"
+
+%--para modificar el tamaño del codigo de cada commit que se hace
+   git config --global core.abbrev 5
+
+%--para comparar entre dos commit
+   git diff 3345g g345n
+
+%--para mostrar solo el nombre de los archivos que cambiaron
+   git diff --name-only 3345g g345n
+
+%--para mostrar la diferencia
+   git diff --word-diff 3345g g345n
+
+%-------------------------------------MODIFICAR Y DESHACER COMMITS--------------------------------
+
+%--para modificar el utlmito commit
+   git commit --amend
+
+%--para modificar una version del commit anterior (el numero representa cuantos commit vamos a retroceder)
+   git rebase -i head~3
+
+%--para devolver los commit que teniamos originalmente despues de modificar un commit anterior
+   git rebase --continue
+
+%--para posicionar el puntero en un commit anterior de nuestra preferencia y a su vez se eliminaran todos los commit que estas despues de el
+   git reset --soft f684f
+
+%--para eliminar todos los archivos del area de preparacion
+   git reset --mixed
+
+%--para eliminar el ultimo commit y descarta los cambios completamente y los coloca en nuestra area de trabajo
+%--NOTA: los archivos que se hayan borrado al usar este comando no se pueden recuperar al menos que tengan un respaldo en otro lugar
+   git reset --hard 65asfda
+
+%--para eliminar el uno o varios commit
+   git reset --hard HEAD~1
+
+%-------------------------------------RAMAA--------------------------------
+
+%--para ver todas las ramas que tenemos creadas
+    git branch
+
+%--para crear una rama sería
+    git branch nombre-de-la-rama
+
+%--para ubicarnos en la rama deseada utilizamos un comando antes visto (se recomienda para movernos entre archivos, ir a versiones anteriores o ir o otros commit)
+    git checkout nombre-de-la-rama
+
+%--también se utiliza esta forma para cambiar de rama (se recomienda usar esta opcion ya que está diseñada para movernos entre ramas)
+    git switch nombre-de-la-rama
+
+%--para crear una rama nueva y posicionarnos en ella automaticamente usando un checkout sería
+    git checkuot -b nombre-de-la-rama-nueva
+
+%--para crear una rama nueva y posicionarnos en ella automaticamente usando un switch sería
+    git switch -c nombre-de-la-rama-nueva
+
+%--para borrar una rama sería
+%--NOTA: primero hay que posicionarnos en otra rama para poder borrarla
+    git branch -d nobre-de-la-rama
+
+%--1ra forma para modificar el nombre de la rama
+% NOTA: solo se hace si estamos en una rama distinta en una rama a la que queremos modificar
+    git branch -m nombre-rama-viejo nombre-rama-nuevo
+
+%--2da forma para modificar el nombre de la rama
+% NOTA: solo se hace si estamos en la rama que queremos modificar
+    git branch -m nombre-rama-nuevo
+
+%-------------------------------------FUSIONAR RAMAS (MERGE)--------------------------------
+
+%--para fusionar las ramas
+%NOTA: es necesario que el puntero esté en la rama a fusionar
+%EJEMPLO: si quieres fusinar la rama b hacia la rama a tienes que posicionarte en la rama a y traer la b
+   git merge nombre-de-la-rama
+
+%--si metemos la pata solo tenemos que usar el siguiente codigo visto anteriormente y el codigo con la rama fucionada
+   git reset --hard nombre-del-commit-deseado
+
+%-------------------------------------MERGE CONFLICTS--------------------------------
+
+%--para que muestre todos los commits a pesar de estar en la rama main o master sería
+   git log --oneline --all
+
+%--para que muestre todos los commits a pesar de estar en la rama main o master pero mas detallado
+   git log --oneline --all --graph
+
+%--para que muestre todos los commits a pesar de estar en la rama main o master pero mas detallado a 3000
+   git log --oneline --all --graph --pretty_format:"%c(auto)%h%d %s %c(black)%c(bold)%cr"
+
+%--despues arreglar los conflictos entre ramas se utiliza
+   git merge --continue
+
+%-------------------------------------ARCHIVO GIT IGNORE-------------------------------- 2:12:47
+%--es un archivo .gitignore la cual tiene el objetivo de decirle a git que archivo tiene que ignorar
+
+%--para mostrar todos los archivos y directorios que tiene un commit en específico (para que solo muestre los nombre: --name-only)
+   git ls-tree -r --name-only codigo_commit (tambien se puede colocar HEAD)
+
+%--dentro del archivo .gitignore
+%--para añadir un comentario
+   #vamos a ignorar el archivo ignorar.sty
+
+%--para que al momento de hecer un add o un commit ignore uno o varios archivo se colococaría
+   Nombre_archivo.extension
+
+%--para ignorar varios archivo sin necesidad de escribir todos los nombre se usaría
+   *.extension
+
+%--para no ignorar un archivo en especifico se hace lo siguiente
+   *.extencion % primero se ignorann todos los arechivos
+   !nombre_archivo.extencion %luego se des-ignora el archivo deseado
+
+%--para eliminar todos los archivos dentro de una carpeta sería
+   nombre_carpeta/
+
+%--podemos escoger como podemos ignorar los archivos
+   ...).sty
+   ...copia.sty
+   etc.sty
+
+%--para evitar ignorar un archivo dentro de una carpeta pero si toda la carpeta
+   !nombre_carpeta/archivo.extencion
+
+%--para configurar un .gitignore de forma global para que todos los repositorios lo lean
+   %--PASO 1: se crea un archivo .gitignore en una carpeta cualquiera
+   %--PASO 2: se colocan los archivos que no deseas incluir en ningun repositorio que tu hagas
+   %--PASO 3: se ejecuta el siguiente comando:
+      git config --global core.excludesfile C:/ruta/del/archivo/.gitignore_global
+   
+   %--NOTA: si queremos que un repositorio no tome en cuenta el .gitignore_global se crea un .gitignore dentro de la carpeta en cuestion y le da prioridad a esta
+   %--lo local siempre tiene mas prioridad que lo global
+
+%-------------------------------------GIT ALIAS-------------------------------- 2:27:21
+
+%--para crear un alias
+   git config --global alias.nombre-del-alias "comando de git"
+
+%--NOTA: alias creado hasta ahora sería
+   git ramas = git log --oneline --all --graph
+
+%-------------------------------------GIT REFLOG-------------------------------- 2:31:51
+%--lleva registro de todos los movimientos que tiene un HEAD
+%--puedes recupera algun commit la cual borraste y perdite la referencia puedes usar reflog
+   git reflog
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------GITHUB-------------------------------- 2:38:36
+
+%--para clonar un repositorio desde github hasta tu compu (sa baja el repositorio completo)
+   git clone https://enlace-del-repositorio
+
+%--para subir todo lo que hayas hecho en el ordenador y lo vas a subir al repositorio remoto
+   git push origin nombre-rama
+
+%--si otra persona realiza modificaciones en el repositorio remoto y necesitas tener esos cambios pero sin descargar todos los archivos nuevamente se usaría
+%--baja los archivos directamente del servidor y los fusiona a la rama local automaticamente
+   git pull
