@@ -17,7 +17,7 @@
     <div class=" container-fluid form_container">
       
       <!-- comienzo del formulario -->
-      <form class="m-5 form_class padding: 50px;" method="POST" action="valid_form.php">
+      <form class="m-5 form_class padding: 50px;" method="POST" action="valid_regist.php">
         <div class="row justify-content-center formlog_row" aling="center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
             <h2 class="formlog_title" style="text-transform: uppercase; font-weight: 700;">Registro</h2>
@@ -138,10 +138,8 @@
               </button>
             </div>
           </div>
-          
-          <script src="valid_form.js"></script>
 
-          <script>
+          <!-- <script>
             const id_span1 = document.getElementById('span_InputPassword1');
             const id_span2 = document.getElementById('span_InputPassword2');
             const id_password1 = document.getElementById('Password1');
@@ -160,7 +158,7 @@
                 id_span2.querySelector('i').classList.toggle('bi-eye-slash-fill');
 
             });
-          </script>
+          </script> -->
 
           
 
@@ -171,7 +169,9 @@
               }
             ?>
           </div>
-
+        
+          <script src="valid_regist.js"></script>
+          
         </fieldset>
       </form>
     </div>
