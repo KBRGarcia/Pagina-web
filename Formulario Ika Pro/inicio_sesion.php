@@ -31,7 +31,7 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 formlog_col">
               <div class="mb-3">
                 <div id="formulario__email">
-                  <label for="exampleInputEmail1" class="form-label" id="InputEmail1">Email address</label>
+                  <label for="exampleInputEmail1" class="form-label" id="InputEmail1">Usuario</label>
                   <input type="email" name="Correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
@@ -44,7 +44,7 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 formlog_col">
               <div class="mb-3">
                 <div id="formulario__password">
-                  <label for="Password1" class="form-label" id="InputPassword1">Password</label>
+                  <label for="Password1" class="form-label" id="InputPassword1">Contraseña</label>
                   <input type="password" name="Password1" class="form-control" id="Password1">
                   <span class="icono-eye" id="span_InputPassword1"><i class="blockpass bi bi-eye-fill"></i></span>
                 </div>
