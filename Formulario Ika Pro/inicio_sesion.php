@@ -30,10 +30,10 @@
           <div class="row justify-content-center formlog_row">
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 formlog_col">
               <div class="mb-3">
-                <div id="formulario__email">
-                  <label for="exampleInputEmail1" class="form-label" id="InputEmail1">Usuario</label>
-                  <input type="email" name="Correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text"></div>
+                <div id="formulario__usuario">
+                  <label for="usuarioinput" class="form-label" id="Inputinput">Usuario</label>
+                  <input type="text" name="Usuario" class="form-control" id="usuarioinput">
+                  <div id="usuarioHelp" class="form-text"></div>
                 </div>
               </div>
             </div>
@@ -44,9 +44,9 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 formlog_col">
               <div class="mb-3">
                 <div id="formulario__password">
-                  <label for="Password1" class="form-label" id="InputPassword1">Contraseña</label>
-                  <input type="password" name="Password1" class="form-control" id="Password1">
-                  <span class="icono-eye" id="span_InputPassword1"><i class="blockpass bi bi-eye-fill"></i></span>
+                  <label for="Password" class="form-label" id="InputPassword">Contraseña</label>
+                  <input type="password" name="Password" class="form-control" id="Password">
+                  <span class="icono-eye" id="span_InputPassword"><i class="blockpass bi bi-eye-fill"></i></span>
                 </div>
               </div>
             </div>
@@ -65,14 +65,14 @@
           <script src="valid_form.js"></script>
 
           <script>
-            const id_span1 = document.getElementById('span_InputPassword1');
+            const id_span1 = document.getElementById('span_InputPassword');
             const id_span2 = document.getElementById('span_InputPassword2');
-            const id_password1 = document.getElementById('Password1');
+            const id_Password = document.getElementById('Password');
             const id_password2 = document.getElementById('Password2');
 
             id_span1.addEventListener('click', () => {
-                const type = id_password1.getAttribute('type') === 'password' ? 'text' : 'password';
-                id_password1.setAttribute('type', type);
+                const type = id_Password.getAttribute('type') === 'password' ? 'text' : 'password';
+                id_Password.setAttribute('type', type);
                 id_span1.querySelector('i').classList.toggle('bi-eye-slash-fill');
 
             });
