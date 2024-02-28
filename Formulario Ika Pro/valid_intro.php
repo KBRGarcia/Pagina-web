@@ -4,22 +4,22 @@ include("conexion.php");
 $hay_error = false;
 $error = "";
 
-if (empty($_POST['Correo']) || empty($_POST['Password1'])) {
+if (empty($_POST['Usuario']) || empty($_POST['Password'])) {
     $error = 'Rellene todos los campos correctamente.';
     header('location: inicio_sesion.php?ERR=' . $error);
     $hay_error = true;
 } else {
     // Obtención de datos del formulario
-    $correo = $_POST["Correo"];
-    $contrasena = $_POST["Password1"];
+    $usuario = $_POST["Usuario"];
+    $contrasena = $_POST["Password"];
 
     // Consulta para verificar los datos
-    $sql = "SELECT * FROM user_name WHERE Correo = '$correo' AND Password1 = '$contrasena'";
+    $sql = "SELECT * FROM usuario WHERE Usuario = '$usuario' AND Password = '$contrasena'";
     $result = $connected->query($sql);
 
     if ($result && $result->num_rows > 0) {
         // redirigir a otra página si los datos son correctos
-        header("Location: bienvenido.php");
+        header("Location: Flujogramas/inicio.html");
         exit();
     } else {
         // mensaje de error si los datos son incorrectos
