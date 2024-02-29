@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-02-2024 a las 01:07:46
+-- Tiempo de generación: 29-02-2024 a las 02:11:10
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.26
 
@@ -37,14 +37,17 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `Password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `Direccion` text COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `Nombre`, `Apellido`, `Correo`, `Usuario`, `Password`, `Direccion`) VALUES
-(1, 'Paola', 'Miranda', 'Paolamiranda@gmail.com', 'PaolaVMP@gmail.com', 'contrasenia-123', 'Caracas, Parque Central, conjunto residencial');
+(1, 'Paola', 'Miranda', 'Paolamiranda@gmail.com', 'PaolaVMP', 'contrasenia-123', 'Caracas, Parque Central, conjunto residencial'),
+(2, 'Alejandro', 'Torres', 'Alejandrotorres@gmail.com', 'AleAle', 'asdfg', 'En tu corazón y mas allá'),
+(3, 'Ikabaru', 'Garcia', 'Ikabarugarcia12@gmail.com', 'KBRGarcia', 'qwert', 'Colinas de Carrizal, Miranda, Venezuela'),
+(4, 'Vanessa', 'Espinoza', 'Vanessaesp@hotmail.com', 'Vane2024', 'poiuyt', 'Bibo lejos de todoz y de todo eve');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
