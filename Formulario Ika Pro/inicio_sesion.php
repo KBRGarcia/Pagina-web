@@ -14,7 +14,7 @@
 
                                     <!-- INICIO DE SESION SI YA SE ENCUENTRA REGISTRADO -->
 
-  <div class="form_inicio container global_form">
+                                    <div class="form_inicio container global_form">
     <div class=" container-fluid form_container">
       
       <!-- comienzo del formulario -->
@@ -26,13 +26,13 @@
         </div>
         <fieldset>
          
-          <!-- correo electronico -->
+          <!-- usuario -->
           <div class="row justify-content-center formlog_row">
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 formlog_col">
               <div class="mb-3">
                 <div id="formulario__usuario">
-                  <label for="usuarioinput" class="form-label" id="Inputinput">Usuario</label>
-                  <input type="text" name="Usuario" class="form-control" id="usuarioinput">
+                  <label for="userinput" class="form-label" id="Inputinput">Usuario</label>
+                  <input type="text" name="usuario" class="form-control" id="userinput">
                   <div id="usuarioHelp" class="form-text"></div>
                 </div>
               </div>
@@ -52,7 +52,7 @@
             </div>
           </div>
 
-          <!-- boton para inisio de sesión -->
+          <!-- boton para inicio de sesión -->
           <div class="row justify-content-center formlog_row" align="center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
               <button type="submit" class="btn btn-primary" name="texto">
@@ -99,6 +99,7 @@
       </form>
     </div>
   </div>
+
           
   <script src="js_bootstrap/jquery-3.6.0.min.js"></script>
   <script src="js_bootstrap/bootstrap.min.js"></script>
