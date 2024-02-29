@@ -1,146 +1,73 @@
 <?php
 
-    include("conexion.php");
-    $hay_error = false;
-    $error = "";
+include("conexion.php");
 
-    if (empty($_POST['Nombre']) && empty($_POST['Apellido']) && empty($_POST['Correo']) 
-    && empty($_POST['Usuario']) && empty($_POST['Password']) && empty($_POST['Direccion'])){
+// Verificamos si se ha enviado el formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Inicializamos variables para almacenar los datos del formulario
+    $nombre = $apellido = $email = $usuario = $password = $direccion = "";
 
-        $error = 'Rellene todo los campos imbecil';
-        header('location:registro.php?ERR=' . $error);
-        $hay_error=true;
+    // Verificamos si los campos del formulario están seteados
+    if (isset($_POST["Nombre"], $_POST["Apellido"], $_POST["Correo"], $_POST["Usuario"], $_POST["Password1"], $_POST["Direccion"])) {
+        // Obtenemos los datos del formulario
+        $nombre = $_POST["Nombre"];
+        $apellido = $_POST["Apellido"];
+        $email = $_POST["Correo"];
+        $usuario = $_POST["Usuario"];
+        $password = $_POST["Password1"]; // No necesitamos la confirmación de contraseña aquí
+        $direccion = $_POST["Direccion"];
 
-    }else{
+        // Consulta SQL para verificar si el correo electrónico ya está registrado
+        $sql_check_email = "SELECT * FROM usuarios WHERE Correo = '$email' LIMIT 1";
+        $result_check_email = $connected->query($sql_check_email);
 
-        if(isset($_POST['texto'])){
-            
-            // Obtener datos del formulario
-            $nombre = $_POST['Nombre'];
-            $apellido = $_POST['Apellido'];
-            $email = $_POST['Correo'];
-            $usuario = $_POST['Usuario'];
-            $password = $_POST['Password'];
-            $direccion = $_POST['Direccion'];
-
-            //confirmar que los datos del formulario no esten vacios utilizando un if
-            //verificación de que el cambo del nombre no se encuentre vacio
-            if (!empty($_POST['Nombre'])) {
-                $nombre = $_POST['Nombre'];
-            } else{
-                $error = "Debebe ingresar su Nombre";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-            }
-
-            //verificación de que el cambo del apellido no se encuentre vacio
-            if (!empty($_POST['Apellido'])) {
-                $apellido = $_POST['Apellido'];
-            } else{
-                $error = "Debebe ingresar su Apellido";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-            }
-
-            //verificación de que el cambo del email no se encuentre vacio
-            if(!empty($_POST['Correo'])){
-                $email = $_POST['Correo'];
-            } else{
-                $error = "Debebe ingresar un email";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-            }
-
-            // //verificación de que el cambo de confirmacion del email no se encuentre vacio
-            // if(!empty($_POST['Correo2'])){
-            //     $email2 = $_POST['Correo2'];
-            // } else{
-            //     $error = "Debe ingresar la confirmación del email";
-            //     header('location:registro.php?ERR=' . $error);
-            //     $hay_error=true;
-            // }
-
-            // if ($_POST['Correo'] != $_POST['Correo2']){
-            //     $error = "Los Correos no coinciden";
-            //     header('location:registro.php?ERR=' . $error);
-            //     $hay_error=true;
-            // }
-
-            //verificación de que el cambo del Usuario no se encuentre vacio
-            if (!empty($_POST['Usuario'])) {
-                $usuario = $_POST['Usuario'];
-            } else{
-                $error = "Debebe ingresar su Usuario";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-            }
-
-            //verificación de que el cambo de la contraseña no se encuentre vacio
-            if(!empty($_POST['Password'])){
-                $password = $_POST['Password'];
-            } else{
-                $error = "Debe ingresar una contraseña";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-            }
-
-            // //verificación de que el cambo de la confirmacion de la contraseña no se encuentre vacio
-            // if(!empty($_POST['Password2'])){
-            //     $password2 = $_POST['Password2'];
-            // } else{
-            //     $error = "Debe confirmar que su contraseña sea igual a la ingresada con anterioridad";
-            //     header('location:registro.php?ERR=' . $error);
-            //     $hay_error=true;
-            // }
-
-            // if ($_POST['Password1'] != $_POST['Password2']){
-            //     $error = "Las contraseñas no coinciden";
-            //     header('location:registro.php?ERR=' . $error);
-            //     $hay_error=true;
-            // }
-
-            //verificación de que el cambo de la direccion no se encuentre vacio
-            if(!empty($_POST['Direccion'])){
-                $direccion = $_POST['Direccion'];
-            } else{
-                $error = "Debe ingresar la dirección de su domicilio o vivienda";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-            }
-
-             //verificar de que el usuario no se encuentre registrado en la base de datos
-            $confir = "SELECT * FROM usuarios WHERE Correo = '$email' LIMIT 1";
-            $confir2 = mysqli_query($connected, $confir);
-            $confir3 = mysqli_fetch_assoc($confir2);
-                       
-            if ($confir3 > 0){
-                if ($confir3['Correo'] === $email){
-                    $error = "El correo electronico ya se encuentra registrado";
-                header('location:registro.php?ERR=' . $error);
-                $hay_error=true;
-                }
-            }
+        // Verificamos si el correo electrónico ya está registrado
+        if ($result_check_email->num_rows > 0) {
+            $error = "El correo electrónico ya está registrado.";
+            header('location:registro.html?ERR=' . $error);
+            exit();
         }
-    }
 
-    if(!$hay_error){
-        header('location:conexion.php');
+        // Consulta SQL para verificar si el usuario ya está registrado
+        $sql_check_usuario = "SELECT * FROM usuarios WHERE Usuario = '$usuario' LIMIT 1";
+        $result_check_usuario = $connected->query($sql_check_usuario);
 
-        // Consulta SQL para insertar datos
-    $sql = "INSERT INTO usuarios (Nombre, Apellido, Correo, Usuario, Password, Direccion) 
-    VALUES ('$nombre', '$apellido', '$email', '$usuario', '$password', '$direccion')";
+        // Verificamos si el usuario ya está registrado
+        if ($result_check_usuario->num_rows > 0) {
+            $error = "El nombre de usuario ya está en uso.";
+            header('location:registro.html?ERR=' . $error);
+            exit();
+        }
 
-    if ($connected->query($sql) === TRUE) {
-        echo "Datos insertados correctamente";
-        header("Location: bienvenido.php");
-        exit();
+        // Consulta SQL para insertar datos en la base de datos
+        $sql_insert = "INSERT INTO usuarios (Nombre, Apellido, Correo, Usuario, Password, Direccion) 
+                       VALUES ('$nombre', '$apellido', '$email', '$usuario', '$password', '$direccion')";
+
+        // Intentamos ejecutar la consulta de inserción
+        if ($connected->query($sql_insert) === TRUE) {
+            // Redireccionamos a la página de bienvenida si la inserción fue exitosa
+            header("Location: inicio_sesion.php");
+            exit();
+        } else {
+            // Si hay un error al insertar los datos, redireccionamos al formulario de registro con un mensaje de error
+            $error = "Error al insertar datos: " . $connected->error;
+            header('location:registro.html?ERR=' . $error);
+            exit();
+        }
     } else {
-        echo "Error al insertar datos: " . $connected->error;
+        // Si no se han seteado todos los campos del formulario, redireccionamos al formulario de registro con un mensaje de error
+        $error = "Todos los campos son obligatorios.";
+        header('location:registro.html?ERR=' . $error);
+        exit();
     }
-
-    $connected->close();
-
-
-    }
+} else {
+    // Si no se ha enviado el formulario mediante POST, redireccionamos al formulario de registro con un mensaje de error
+    $error = "El formulario no ha sido enviado correctamente.";
+    header('location:registro.html?ERR=' . $error);
+    exit();
+}
 
 ?>
+
+
+<!-- dame el codigo sql que me permita analizar si  un dato existe o no antes de hacer un INSERT INTO para evitar la duplicidad de datos dentro del código php -->

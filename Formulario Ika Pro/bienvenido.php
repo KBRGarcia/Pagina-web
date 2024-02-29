@@ -23,7 +23,7 @@
             // código de conexión a la base de datos
             include("conexion.php");
 
-            $sql = "SELECT Nombre FROM user_name WHERE id = 1";
+            $sql = "SELECT Nombre FROM usuario WHERE id = 1";
             $resultado = $connected->query($sql);
 
             if ($resultado->num_rows > 0) {
