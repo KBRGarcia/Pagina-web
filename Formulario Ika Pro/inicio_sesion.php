@@ -60,7 +60,18 @@
                 <a style="text-decoration: none; color: #fff;">Inicio</a>
               </button>
             </div>
+          </div><br>
+
+          <!-- boton para volver al login principal -->
+          <div class="row justify-content-center formlog_row" align="center">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
+                <a href="login.html" class="btn btn-primary">
+                    <i class="bi bi-arrow-left"></i>&nbsp;&nbsp;
+                    <span style="text-decoration: none; color: #fff;">Volver</span>
+                </a>
+            </div>
           </div>
+
 
           <script src="valid_form.js"></script>
 
