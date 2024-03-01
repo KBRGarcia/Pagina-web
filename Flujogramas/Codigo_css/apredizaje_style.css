@@ -12,16 +12,16 @@ body {
     min-height: 100vh;
     /* background: linear-gradient(45deg, rgb(73, 73, 73), rgb(113, 1, 189)); */
     /* background: #222327; */
-    background-image: url(./The_Ghost.png);
+    background-image: url(./Imagenes/The_Ghost.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     
 }
 
-.container {
-    margin-top: 5%;
-    margin-bottom: 5%;
+.container-fluid {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .enlace_inicio a {
@@ -33,6 +33,8 @@ body {
     background: #fff;
     border-radius: 50%;
     color: #111;
+    margin-top: 3%;
+    margin-bottom: 0;
 }
 
 .enlace_inicio a:hover {
@@ -51,15 +53,15 @@ body {
 }
 
 .titulo_nombre {
+    color: rgb(255, 255, 255);
+    background:rgba(128, 128, 128, 0.3);
+    padding: 2.5%;
+    padding-left: 2.5;
+    padding-right: 2.5;
     display: flex;
     justify-content: center;
     align-items: center;
-    background:rgba(128, 128, 128, 0.15);
-    margin: 1%;
-    padding: 1%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    border-radius: 20px;
+    width: 100%;
 }
 
 #flowchart {
@@ -71,13 +73,12 @@ body {
 
 .titulo {
     height: 60px;
-    width: 800px;
+    width: 450px;
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
     background-color: #333;
     padding: 10px;
-    margin: 10px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -86,7 +87,7 @@ body {
 
 .texto {
     height: 60px;
-    width: 600px;
+    width: 350px;
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
@@ -106,10 +107,10 @@ body {
 }
 
 div .copyright {
-    background:rgba(128, 128, 128, 0.15);
-    margin: 5%;
+    color: rgb(233, 232, 232);
+    background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    border-radius: 20px;
+    width: 100%;    
 }

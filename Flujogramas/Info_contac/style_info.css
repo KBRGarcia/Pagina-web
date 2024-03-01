@@ -81,12 +81,15 @@ body {
 
 .titulo {
     color: rgb(255, 255, 255);
-    background:rgba(128, 128, 128, 0.2);
-    margin: 5%;
+    background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
 }
 
 .enlace_inicio a {
@@ -98,8 +101,9 @@ body {
     background: #fff;
     border-radius: 50%;
     color: #111;
-    margin-left: 40%;
-    margin-bottom: 5%;
+    margin-top: 25%;
+    margin-bottom: 0;
+    margin-left: 20%;
     
 }
 
@@ -122,42 +126,74 @@ body {
     color: #ff1252;
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 div .info_texto {
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.8);
-    margin: 0.5%;
+    margin: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+}
+
+div .info_texto:hover {
+    animation: float 2s infinite alternate;
+    background:rgb(80, 79, 79);
+    color: white;
 }
 
 .copyright {
     color: rgb(233, 232, 232);
-    background:rgba(128, 128, 128, 0.2);
-    margin: 5%;
+    background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    border-radius: 20px;
+    width: 100%;
 }
 
-div .mensaje p {
-    color: rgb(255, 255, 255);
-    background:rgba(128, 128, 128, 0.8);
-    margin: 0.5%;
+div .mensaje, div .asunto {
+    margin: 2%;
     padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    border-radius: 20px;
+}
+
+textarea .asunto {
+    width: 20em;
+    height: 4em;
+}
+
+textarea .mensaje{
+    width: 20em;
+    height: 7em;
 }
 
 div .direccion {
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.8);
-    margin: 0.5%;
+    margin: 3%;
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+}
+
+div .direccion:hover {
+    animation: float 2s infinite alternate;
+    background:rgb(80, 79, 79);
+    color: white;
 }

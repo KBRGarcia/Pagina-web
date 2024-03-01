@@ -48,16 +48,16 @@ body {
 }
 
 .titulo {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:rgba(128, 128, 128, 0.15);
-    margin: 1%;
-    padding: 1%;
+    color: rgb(255, 255, 255);
+    background:rgba(128, 128, 128, 0.3);
+    margin: 5%;
+    padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sub_titulo {
@@ -66,13 +66,12 @@ body {
 }
 
 div .copyright {
-    color: rgb(177, 177, 177);
-    background:rgba(128, 128, 128, 0.15);
+    color: rgb(233, 232, 232);
+    background:rgba(128, 128, 128, 0.8);
     margin: 5%;
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    border-radius: 20px;
 }
 
 div .row .info_js  {
