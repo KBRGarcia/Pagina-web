@@ -19,7 +19,7 @@
       
       <!-- comienzo del formulario -->
       <form class="m-5 form_class" method="POST" action="valid_inicio.php" autocomplete = "off">
-        <div class="row justify-content-center formlog_row" aling="center">
+        <div class="row justify-content-center formlog_row" align="center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
             <h2 class="formlog_title" style="text-transform: uppercase; font-weight: 700;">Inicio de Sesión</h2>
           </div>
@@ -53,7 +53,7 @@
           </div>
 
           <!-- boton para inicio de sesión -->
-          <div class="row justify-content-center formlog_row" align="center">
+          <div class="row justify-content-center formlog_row" align = "center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
               <button type="submit" class="btn btn-primary" name="texto">
                 <i class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;
@@ -63,7 +63,7 @@
           </div><br>
 
           <!-- boton para volver al login principal -->
-          <div class="row justify-content-center formlog_row" align="center">
+          <div class="row justify-content-center formlog_row" align = "center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
                 <a href="login.html" class="btn btn-primary">
                     <i class="bi bi-arrow-left"></i>&nbsp;&nbsp;
