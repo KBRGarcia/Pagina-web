@@ -18,8 +18,8 @@
     <div class=" container-fluid form_container">
       
       <!-- comienzo del formulario -->
-      <form class="m-5 form_class" method="POST" action="valid_inicio.php">
-        <div class="row justify-content-center formlog_row" align="center">
+      <form class="m-5 form_class" method="POST" action="valid_inicio.php" autocomplete = "off">
+        <div class="row justify-content-center formlog_row" aling="center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
             <h2 class="formlog_title" style="text-transform: uppercase; font-weight: 700;">Inicio de Sesión</h2>
           </div>

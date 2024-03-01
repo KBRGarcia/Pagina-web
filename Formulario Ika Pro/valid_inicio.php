@@ -31,14 +31,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             // Si hay 5 intentos fallidos, redirigir al usuario a la página de registro
-            if ($_SESSION['intentos'] >= 5) {
+            if ($_SESSION['intentos'] >= 3) {
                 unset($_SESSION['intentos']); // Restablecer el contador de intentos
                 header("Location: registro.php");
                 exit();
             }
 
             // Si no hay 5 intentos fallidos, redirigir al usuario a la página de inicio de sesión con un mensaje de error
-            $error = "Usuario o contraseña incorrectos. Intento " . $_SESSION['intentos'] . "/5";
+            $error = "Usuario o contraseña incorrectos. Intento " . $_SESSION['intentos'] . "/3";
             header('location:inicio_sesion.php?ERR=' . $error);
             exit();
         }
