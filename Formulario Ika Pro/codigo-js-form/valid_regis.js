@@ -83,7 +83,8 @@ function validarDireccion(direccion) {
 }
 
 // Función para resaltar un campo erróneo
-function resaltarCampoErroneo(campo, mensaje) {
-  campo.style.borderColor = 'red'; // Cambia el borde del campo a color rojo
-  campo.nextElementSibling.textContent = mensaje; // Muestra el mensaje de error
+function resaltarCampoErroneo(input, mensaje) {
+  const errorDiv = input.nextElementSibling;
+  errorDiv.textContent = mensaje;
+  input.style.borderColor = "red";
 }
