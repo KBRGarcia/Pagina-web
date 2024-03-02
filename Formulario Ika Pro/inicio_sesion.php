@@ -73,30 +73,7 @@
           </div>
 
 
-          <script src="valid_form.js"></script>
-
-          <script>
-            const id_span1 = document.getElementById('span_InputPassword');
-            const id_span2 = document.getElementById('span_InputPassword2');
-            const id_Password = document.getElementById('Password');
-            const id_password2 = document.getElementById('Password2');
-
-            id_span1.addEventListener('click', () => {
-                const type = id_Password.getAttribute('type') === 'password' ? 'text' : 'password';
-                id_Password.setAttribute('type', type);
-                id_span1.querySelector('i').classList.toggle('bi-eye-slash-fill');
-
-            });
-
-            id_span2.addEventListener('click', () => {
-                const type = id_password2.getAttribute('type') === 'password' ? 'text' : 'password';
-                id_password2.setAttribute('type', type);
-                id_span2.querySelector('i').classList.toggle('bi-eye-slash-fill');
-
-            });
-          </script>
-
-          
+          <script src="valid_inicio.js"></script>          
 
           <div id="mensaje_error" aling="center" style="font-family: 'Gotham' sans-serif; color:red; font-size: small;"><br>
             <?php

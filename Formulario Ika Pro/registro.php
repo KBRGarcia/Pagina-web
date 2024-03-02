@@ -18,7 +18,7 @@
       
       <!-- comienzo del formulario -->
       <form class="m-5 form_class padding: 50px;" method="POST" action="valid_regist.php" autocomplete = "off">
-        <div class="row justify-content-center formlog_row" aling="center">
+        <div class="row justify-content-center formlog_row" align="center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
             <h2 class="formlog_title" style="text-transform: uppercase; font-weight: 700;">Registro</h2>
           </div>
@@ -130,7 +130,7 @@
           </div>
 
           <!-- boton para registrarse -->
-          <div class="row justify-content-center formlog_row" aling="center">
+          <div class="row justify-content-center formlog_row" align="center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
               <button type="submit" class="btn btn-primary" name="texto">
                 <i class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;
@@ -140,7 +140,7 @@
           </div><br>
 
           <!-- boton para volver al login principal -->
-          <div class="row justify-content-center formlog_row" aling="center">
+          <div class="row justify-content-center formlog_row" align="center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
                 <a href="login.html" class="btn btn-primary">
                     <i class="bi bi-arrow-left"></i>&nbsp;&nbsp;
@@ -149,38 +149,15 @@
             </div>
           </div>
 
-          <!-- <script>
-            const id_span1 = document.getElementById('span_InputPassword1');
-            const id_span2 = document.getElementById('span_InputPassword2');
-            const id_password1 = document.getElementById('Password1');
-            const id_password2 = document.getElementById('Password2');
+          <script src="valid_regis.js"></script>
 
-            id_span1.addEventListener('click', () => {
-                const type = id_password1.getAttribute('type') === 'password' ? 'text' : 'password';
-                id_password1.setAttribute('type', type);
-                id_span1.querySelector('i').classList.toggle('bi-eye-slash-fill');
-
-            });
-
-            id_span2.addEventListener('click', () => {
-                const type = id_password2.getAttribute('type') === 'password' ? 'text' : 'password';
-                id_password2.setAttribute('type', type);
-                id_span2.querySelector('i').classList.toggle('bi-eye-slash-fill');
-
-            });
-          </script> -->
-
-          
-
-          <div id="mensaje_error" aling="center" style="font-family: 'Gotham' sans-serif; color:red; font-size: small;"><br>
+          <div id="mensaje_error" align="center" style="font-family: 'Gotham' sans-serif; color:red; font-size: small;"><br>
             <?php
               if (isset($_GET['ERR'])) {
                 echo $_GET['ERR'];
               }
             ?>
           </div>
-        
-          <script src="valid_regist.js"></script>
           
         </fieldset>
       </form>
