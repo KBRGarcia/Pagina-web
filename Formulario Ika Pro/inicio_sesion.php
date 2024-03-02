@@ -14,7 +14,7 @@
 
                                     <!-- INICIO DE SESION SI YA SE ENCUENTRA REGISTRADO -->
 
-                                    <div class="form_inicio container global_form">
+    <div class="form_inicio container global_form">
     <div class=" container-fluid form_container">
       
       <!-- comienzo del formulario -->
