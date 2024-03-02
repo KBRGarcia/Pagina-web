@@ -4,10 +4,17 @@
     padding: 0;
 }
 
-body{
-    height: 100vh;
-    
-    background: rgb(27, 27, 27);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(45deg, rgb(73, 73, 73), rgb(113, 1, 189)); */
+    /* background: #222327; */
+    background-image: url(../The_Ghost_logo2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* -------------estilos del formulario-------------- */
@@ -79,6 +86,16 @@ a {
     color: white;
     align-items: center;
 
+}
+
+div .copyright {
+    color: rgb(233, 232, 232);
+    background:rgba(128, 128, 128, 0.3);
+    margin: 5%;
+    padding: 2.5%;
+    padding-left: 2.5;
+    padding-right: 2.5;
+    /* border-radius: 20px; */
 }
 
 /* --------------estilos del inicio de sesion------------------- */

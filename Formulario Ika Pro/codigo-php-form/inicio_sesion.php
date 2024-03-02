@@ -90,6 +90,18 @@
         </fieldset>
       </form>
     </div>
+    <div class="copyright">
+			<div class="row">
+				<div class="the_ghost">
+					<h6>The Ghost. © 2024 Copyright. Todos los Derechos Reservados.</h6>
+				</div>          
+			</div>
+			<div class="row">
+				<div class="the_ghost">
+					<h6>Technology and computer science and systems corporation</h6>
+				</div>
+			</div>
+		</div>
   </div>
 
           
