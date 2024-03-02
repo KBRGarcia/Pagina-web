@@ -1,3 +1,15 @@
+<?php
+    // Incluir el script de verificación de sesión
+    include 'verificar_sesion.php';
+
+    // Verificar si el usuario ha iniciado sesión correctamente
+    if (!isset($_SESSION['usuario'])) {
+        // Redirigir al usuario a la página de inicio de sesión
+        header("Location: inicio_sesion.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
