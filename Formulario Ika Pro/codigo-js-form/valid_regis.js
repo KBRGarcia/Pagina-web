@@ -1,90 +1,100 @@
+document.addEventListener("DOMContentLoaded", function() {
 // Obtener referencia a los elementos del formulario
-const form = document.querySelector('form');
-const nombreInput = document.querySelector('input[name="Nombre"]');
-const apellidoInput = document.querySelector('input[name="Apellido"]');
-const correoInput = document.querySelector('input[name="Correo"]');
-const correoConfirmInput = document.querySelector('input[name="Correo2"]');
-const usuarioInput = document.querySelector('input[name="Usuario"]');
-const passwordInput = document.querySelector('input[name="Password1"]');
-const passwordConfirmInput = document.querySelector('input[name="Password2"]');
-const direccionInput = document.querySelector('textarea[name="Direccion"]');
+  const form = document.querySelector("form");
+  const nombreInput = document.querySelector("name");
+  const apellidoInput = document.querySelector("lastname");
+  const correoInput = document.querySelector("exampleInputEmail1");
+  const correoConfirmInput = document.querySelector("exampleInputEmail2");
+  const usuarioInput = document.querySelector("user");
+  const passwordInput = document.querySelector("Password1");
+  const passwordConfirmInput = document.querySelector("Password2");
+  const direccionTextarea = document.querySelector("exampleFormControlTextarea1");
 
-// Agregar el evento submit al formulario
-form.addEventListener('submit', function (event) {
-  // Validar los campos del formulario
-  if (!validarNombre(nombreInput.value)) {
-    event.preventDefault(); // Evitar que el formulario se envíe
-    resaltarCampoErroneo(nombreInput, 'El nombre debe tener entre 3 y 11 caracteres.');
-  }
-
-  if (!validarNombre(apellidoInput.value)) {
+  // Agregar el evento submit al formulario
+  form.addEventListener("submit", function (event) {
+    // Detenemos el envío del formulario para realizar la validación
     event.preventDefault();
-    resaltarCampoErroneo(apellidoInput, 'El apellido debe tener entre 3 y 11 caracteres.');
-  }
 
-  if (!validarCorreo(correoInput.value)) {
-    event.preventDefault();
-    resaltarCampoErroneo(correoInput, 'El correo electrónico no es válido.');
-  }
+    // Reseteamos los estilos de los campos
+    nombreInput.style.borderColor = "";
+    apellidoInput.style.borderColor = "";
+    correoInput.style.borderColor = "";
+    correoConfirmInput.style.borderColor = "";
+    usuarioInput.style.borderColor = "";
+    passwordInput.style.borderColor = "";
+    passwordConfirmInput.style.borderColor = "";
+    direccionTextarea.style.borderColor = "";
+    
+        
+    // Validar los campos del formulario
+    // Validar el el campo del nombre
+    if (nombreInput.value.length >= 3 && nombreInput.value.length <= 11) {
+      mostrarError(nombreInput, "El nombre debe tener entre 3 y 11 caracteres.");
+      return;
+    }
 
-  if (correoInput.value !== correoConfirmInput.value) {
-    event.preventDefault();
-    resaltarCampoErroneo(correoConfirmInput, 'El correo electrónico de confirmación no coincide.');
-  }
+    // Validar el campo del Apellido
+    if (apellidoInput.value.length >= 3 && apellidoInput.value.length <= 11) {
+      mostrarError(apellidoInputt, "El apelliido debe tener entre 3 y 11 caracteres.");
+      return;
+    }
+    
+    // Validar el campo del Correo
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correoConfirmInput)) {
+      mostrarError(correoConfirmInput, "El correo electrónico no es válido.");
+      return;
+    }
 
-  if (!validarUsuario(usuarioInput.value)) {
-    event.preventDefault();
-    resaltarCampoErroneo(usuarioInput, 'El usuario debe tener al menos 5 caracteres.');
-  }
+    //Validar si los correo coinciden
+    if (correoInput.value !== correoConfirmInput.value) {
+      mostrarError(correoConfirmInput, "El correo electrónico de confirmación no coincide.");
+      return;
+    }
 
-  if (!validarPassword(passwordInput.value)) {
-    event.preventDefault();
-    resaltarCampoErroneo(passwordInput, 'La contraseña debe tener entre 8 y 16 caracteres y contener al menos una mayúscula, un número y un carácter especial.');
-  }
+    // Validar el campo del usuario
+    if (usuarioInput.value.length < 5) {
+      mostrarError(usuarioInput, "El usuario debe tener al menos 5 caracteres.");
+      return;
+    }
 
-  if (passwordInput.value !== passwordConfirmInput.value) {
-    event.preventDefault();
-    resaltarCampoErroneo(passwordConfirmInput, 'La contraseña de confirmación no coincide.');
-  }
+    // Validamos el campo de contraseña
+    if (passwordInput.value.length < 8 || passwordInput.value.length > 16) {
+      mostrarError(passwordInput, "La contraseña debe tener entre 8 y 16 caracteres.");
+      return;
+    }
+    if (!/[A-Z]/.test(passwordInput.value)) {
+      mostrarError(passwordInput, "La contraseña debe contener al menos una mayúscula.");
+      return;
+    }
+    if (!/\d/.test(passwordInput.value)) {
+      mostrarError(passwordInput, "La contraseña debe contener al menos un número.");
+      return;
+    }
+    if (!/[!@#$%^&*()-_=+{};:,<.>]/.test(passwordInput.value)) {
+      mostrarError(passwordInput, "La contraseña debe contener al menos un caracter especial.");
+      return;
+    }
 
-  if (!validarDireccion(direccionInput.value)) {
-    event.preventDefault();
-    resaltarCampoErroneo(direccionInput, 'La dirección debe tener entre 10 y 255 caracteres.');
+    // Validar si el campo de las contraseñas coninciden
+    if (passwordInput.value !== passwordConfirmInput.value) {
+      mostrarError(passwordConfirmInput, "La contraseña de confirmación no coincide.");
+      return;
+    }
+
+    // Validar el campo de la direccion
+    if (direccionTextarea.value.length >= 10 && direccion.value.length <= 255) {
+      mostrarError(direccionTextarea, "La dirección debe tener entre 10 y 255 caracteres.");
+      return;
+    }
+
+    //si la validacion pasa enviamos el formulario 
+    form.submit();
+  });
+
+  // Función para mostrar un mensaje de error en un campo específico
+  function mostrarError(input, mensaje) {
+    const errorDiv = input.nextElementSibling;
+    errorDiv.textContent = mensaje;
+    input.style.borderColor = "red";
   }
 });
-
-// Función para validar el nombre y apellido
-function validarNombre(nombre) {
-  return nombre.length >= 3 && nombre.length <= 11;
-}
-
-// Función para validar el correo electrónico
-function validarCorreo(correo) {
-  // Utiliza una expresión regular para validar el formato del correo electrónico
-  const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regexCorreo.test(correo);
-}
-
-// Función para validar el usuario
-function validarUsuario(usuario) {
-  return usuario.length >= 5;
-}
-
-// Función para validar la contraseña
-function validarPassword(password) {
-  // Utiliza una expresión regular para validar el formato de la contraseña
-  const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
-  return regexPassword.test(password);
-}
-
-// Función para validar la dirección
-function validarDireccion(direccion) {
-  return direccion.length >= 10 && direccion.length <= 255;
-}
-
-// Función para resaltar un campo erróneo
-function resaltarCampoErroneo(input, mensaje) {
-  const errorDiv = input.nextElementSibling;
-  errorDiv.textContent = mensaje;
-  input.style.borderColor = "red";
-}

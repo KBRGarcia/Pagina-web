@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../codigo-css-form/style_form.css">
     <link rel="stylesheet" href="fonts/BootstrapIcons/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <title>Inicio de Sesión</title>
+    <title>KBR - Inicio de Sesión</title>
 </head>
 <body>
 
