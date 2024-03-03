@@ -43,8 +43,10 @@
                             <textarea class="asunto" name="asunto" placeholder="Asunto..." required></textarea>
                             <textarea class="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
                     </div><br>
-                    <div class="row d-flex justify-content-center">
-                        <button type="submit">Enviar</button>
+                    <div class="row d-grid">
+                        <form action="../codigo-php-form/registro.php" method="post">
+                            <button type="submit" class="enviar_mensaje btn btn-primary">Enviar</button>
+                        </form>
                     </div>
                 </form>
             </div>
