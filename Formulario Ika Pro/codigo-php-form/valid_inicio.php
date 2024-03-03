@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result_check_user->num_rows > 0) {
             // Si el usuario existe, redirigirlo a la página de bienvenida
-            header("Location: ../../Flujogramas/Codigo_html/inicio.html");
+            header("Location: ../../Flujogramas/codigo_php/inicio.php");
             exit();
         } else {
             // Si el usuario no existe, denegar el acceso

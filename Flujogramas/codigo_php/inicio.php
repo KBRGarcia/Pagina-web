@@ -1,11 +1,14 @@
 <?php
-    // Incluir el script de verificación de sesión
-    include 'verificar_sesion.php';
+    // Verificar las credenciales del usuario
+    if ($credenciales_validas) {
+        // Establecer la variable de sesión 'Usuario'
+        $_SESSION['Usuario'] = $usuario;
 
-    // Verificar si el usuario ha iniciado sesión correctamente
-    if (!isset($_SESSION['usuario'])) {
-        // Redirigir al usuario a la página de inicio de sesión
-        header("Location: inicio_sesion.php");
+        // Establecer la variable de sesión 'Autenticado'
+        $_SESSION['Autenticado'] = true;
+
+        // Redirigir al usuario a la página principal
+        header("Location: ../../Formulario Ika Pro/codigo-html-form/login.html");
         exit();
     }
 ?>
