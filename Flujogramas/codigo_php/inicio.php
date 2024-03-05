@@ -1,18 +1,3 @@
-<?php
-    // Verificar las credenciales del usuario
-    if ($credenciales_validas) {
-        // Establecer la variable de sesión 'Usuario'
-        $_SESSION['Usuario'] = $usuario;
-
-        // Establecer la variable de sesión 'Autenticado'
-        $_SESSION['Autenticado'] = true;
-
-        // Redirigir al usuario a la página principal
-        header("Location: ../../Formulario Ika Pro/codigo-html-form/login.html");
-        exit();
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

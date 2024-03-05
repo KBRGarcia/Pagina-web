@@ -132,7 +132,7 @@
           <!-- boton para registrarse -->
           <div class="row justify-content-center formlog_row" align="center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
-              <button type="submit" class="btn btn-primary" name="texto">
+              <button type="submit" class="registro btn btn-primary" name="texto">
                 <i class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;
                 <a style="text-decoration: none; color: #fff;">Registrarse</a>
               </button>
@@ -142,7 +142,7 @@
           <!-- boton para volver al login principal -->
           <div class="row justify-content-center formlog_row" align="center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
-                <a href="../codigo-html-form/login.html" class="btn btn-primary">
+                <a href="../codigo-html-form/login.html" class="volver btn btn-primary">
                     <i class="bi bi-arrow-left"></i>&nbsp;&nbsp;
                     <span style="text-decoration: none; color: #fff;">Volver</span>
                 </a>

@@ -1,9 +1,5 @@
 #ignorar los archivos SQL
 
-#*.sql
-#*.sty
 
 #ignorar los pluyins de Bootstrap
 
-#css_bootstrap/
-#js_bootstrap/

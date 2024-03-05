@@ -1,4 +1,4 @@
-/* ----------------estilos generales---------------- */
+/* ----------------ESTILOS GENERALES---------------- */
 *{
     margin: 0;
     padding: 0;
@@ -11,14 +11,50 @@ body {
     min-height: 100vh;
     /* background: linear-gradient(45deg, rgb(73, 73, 73), rgb(113, 1, 189)); */
     /* background: #222327; */
-    background-image: url(../The_Ghost_logo2.png);
+    background-image: url(../gargantua.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* -------------estilos del formulario-------------- */
-.global_form .form_container {
+.position-absolute h5 h6{ /*titulo y el nombre de the ghost*/
+    padding-bottom: 40%;
+    color: white;
+    align-items: center;
+
+}
+
+div .copyright { /*el copyright del final de la pagian*/
+    color: rgb(233, 232, 232);
+    background:rgba(128, 128, 128, 0.4);
+    bottom: 0;
+    margin: 5%;
+    padding: 2.5%;
+    padding-left: 2.5;
+    padding-right: 2.5;
+    /* border-radius: 20px; */
+}
+
+a { /*texto dentro de los botones*/
+    color: white;
+}
+
+/* ----------------------ESTILOS DEL LOGIN PRINCIPAL-----------------------*/
+
+.caja_login { /*estilos generales de la caja del login*/
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(56, 56, 56);
+    background:rgba(128, 128, 128, 0.4);
+}
+
+.titulo { /*estilos del titulo del login*/
+    color: rgb(56, 56, 56);
+}
+
+/* -------------ESTILOS GENERALES DE LOS 2 FORMULARIOS-------------- */
+
+.global_form .form_container { /*el div principal que abarca todo el form*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +66,7 @@ body {
 }
 
 
-.global_form .form_container .form_class{
+.global_form .form_container .form_class{ /*etiqueta form*/
     background: rgb(255, 255, 255);
     max-width: 92%;
     width: 300rem;
@@ -38,76 +74,72 @@ body {
     padding: 50px;
 }
 
-.blockpass{
+.blockpass{ /*ojo de las contraseñas*/
     position: absolute;
     padding-left: 500px;
 }
 
-/* ----------------------estilos del login -----------------------*/
-
-.caja_login {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.titulo {
-    color: #333;
-}
-
-
-.inicio_sesion {
+.inicio_sesion { /*estilos del botón de inicio de sesion del login*/
     align-items: center;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #7c0000;
+    border-color: #7c0000;
     color: #fff;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
-.registro {
+.registro { /*estilos del boton de registro deo login*/
     align-items: center;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #7c0000;
+    border-color: #7c0000;
+}
+
+.registro:hover { /*hover del boton de registro del login*/
+    background-color: #932f2f;
+    border-color: #932f2f;
+}
+
+.inicio_sesion:hover { /*hover del boton de inicio de sesion del login*/
+    background-color: #932f2f;
+    border-color: #932f2f;
+}
+
+.volver { /*estilos del botón de volver del login*/
+    align-items: center;
+    background-color: #7c0000;
+    border-color: #7c0000;
+    color: #fff;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
-.inicio_sesion:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+.volver:hover { /*hover del boton de volver del login*/
+    background-color: #932f2f;
+    border-color: #932f2f;
 }
 
-a {
-    color: white;
+.global_form .form_container .form_class { /*caja de los formularios*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    background:rgba(128, 128, 128, 0.4);
 }
 
-.position-absolute hr h5 h6{
-    padding-bottom: 40%;
-    color: white;
-    align-items: center;
+/* --------------ESTILOS DEL INICIO DE SESION------------------- */
 
-}
-
-div .copyright {
-    color: rgb(233, 232, 232);
-    background:rgba(128, 128, 128, 0.3);
-    margin: 5%;
-    padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    /* border-radius: 20px; */
-}
-
-/* --------------estilos del inicio de sesion------------------- */
-.form_inicio {
+.form_inicio { /*div principal*/
     margin-top: auto;
     padding-top: auto;
     max-height: 300rem;
+    
 }
 
-
-
 /********Media Querys********/
+
 @media (max-width:990px) {
     body{
         background-position-y: +180px;
