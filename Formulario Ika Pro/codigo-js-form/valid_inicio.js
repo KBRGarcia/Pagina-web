@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Validamos el campo de contraseña
       const password = passwordInput.value;
       if (password.length < 8 || password.length > 16) {
-          mostrarError(passwordInput, "La contraseña debe tener entre 8 y 16 caracteres.");
+          mostrarError(passwordInput, "La contraseña debe tener entre 8 y 16 caracteres y contener al menos una mayúscula, un número y un carácter especial.");
           return;
       }
       if (!/[A-Z]/.test(password)) {

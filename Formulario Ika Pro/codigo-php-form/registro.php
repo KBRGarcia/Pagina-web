@@ -149,11 +149,11 @@
             </div>
           </div>
 
-          <!-- La validación del lado del cliente -->
-          <script src="../codigo-js-form/valid_regis.js"></script>
-
           <!-- cambiar el tipo de entrada del campo de contraseña y alternar entre mostrar y ocultar la contraseña cuando se hace clic en el icono del ojo -->
           <script src="../codigo-js-form/contrasenia_regist.js"></script>
+
+          <!-- La validación del lado del cliente -->
+          <script src="../codigo-js-form/valid_regis.js"></script>
 
           <!-- validacion de error al conectarse en la base de datos -->
           <div id="mensaje_error" align="center" style="font-family: 'Gotham' sans-serif; color:red; font-size: small;"><br>

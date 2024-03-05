@@ -1,3 +1,13 @@
+/*-----------------AVRIABLES-------------------------*/
+
+:root {
+    --bottom-color: rgba(124, 0, 0, 0.3);
+    --bottom-border: rgba(124, 0, 0, 0.3);
+    --bottom-hover: rgba(255, 7, 7, 0.389);
+    
+    
+}
+
 /* ----------------ESTILOS GENERALES---------------- */
 *{
     margin: 0;
@@ -26,7 +36,7 @@ body {
 
 div .copyright { /*el copyright del final de la pagian*/
     color: rgb(233, 232, 232);
-    background:rgba(128, 128, 128, 0.4);
+    background:rgba(0, 0, 0, 0.2);
     bottom: 0;
     margin: 5%;
     padding: 2.5%;
@@ -43,7 +53,7 @@ a { /*texto dentro de los botones*/
 
 .caja_login { /*estilos generales de la caja del login*/
     /* border-radius: 10px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: rgb(56, 56, 56);
     background:rgba(128, 128, 128, 0.4);
 }
@@ -81,8 +91,8 @@ a { /*texto dentro de los botones*/
 
 .inicio_sesion { /*estilos del botón de inicio de sesion del login*/
     align-items: center;
-    background-color: #7c0000;
-    border-color: #7c0000;
+    background-color: var(--bottom-color);
+    border-color: var(--bottom-border);
     color: #fff;
     padding: 10px;
     padding-left: 50px;
@@ -94,24 +104,24 @@ a { /*texto dentro de los botones*/
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: #7c0000;
-    border-color: #7c0000;
+    background-color: var(--bottom-color);
+    border-color: var(--bottom-border);
 }
 
 .registro:hover { /*hover del boton de registro del login*/
-    background-color: #932f2f;
-    border-color: #932f2f;
+    background-color: var(--bottom-hover);
+    border-color: var(--bottom-hover);
 }
 
 .inicio_sesion:hover { /*hover del boton de inicio de sesion del login*/
-    background-color: #932f2f;
-    border-color: #932f2f;
+    background-color: var(--bottom-hover);
+    border-color: var(--bottom-hover);
 }
 
 .volver { /*estilos del botón de volver del login*/
     align-items: center;
-    background-color: #7c0000;
-    border-color: #7c0000;
+    background-color: var(--bottom-color);
+    border-color: var(--bottom-border);
     color: #fff;
     padding: 10px;
     padding-left: 50px;
@@ -119,8 +129,8 @@ a { /*texto dentro de los botones*/
 }
 
 .volver:hover { /*hover del boton de volver del login*/
-    background-color: #932f2f;
-    border-color: #932f2f;
+    background-color: var(--bottom-hover);
+    border-color: var(--bottom-hover);
 }
 
 .global_form .form_container .form_class { /*caja de los formularios*/

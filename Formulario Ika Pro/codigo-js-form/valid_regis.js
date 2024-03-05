@@ -73,7 +73,7 @@ function validarUsuario(usuario) {
 // Función para validar la contraseña
 function validarPassword(password) {
   // Utiliza una expresión regular para validar el formato de la contraseña
-  const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
+  const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#-+])[A-Za-z\d@$!%*?&]{8,16}$/;
   return regexPassword.test(password);
 }
 

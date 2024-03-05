@@ -6,5 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const type = id_password.getAttribute('type') === 'password' ? 'text' : 'password';
         id_password.setAttribute('type', type);
         id_span.querySelector('i').classList.toggle('bi-eye-slash-fill');
+
+        console.log("se ejecuta el id_span");
     });
-});
+
+    console.log("se ejecuta la funcion");
+}); 
