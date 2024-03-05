@@ -42,6 +42,9 @@ div .copyright { /*el copyright del final de la pagian*/
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
+    margin-top: 20px; /* Reduce el margen superior del div de derechos de autor */
+    margin-bottom: 20px; /* Reduce el margen inferior del div de derechos de autor */
+    padding: 10px; /* Ajusta el relleno del div de derechos de autor según sea necesario */
     /* border-radius: 20px; */
 }
 
@@ -71,8 +74,8 @@ a { /*texto dentro de los botones*/
     height: 100vh;
     max-width: 750px;
     margin: auto;
-    margin-top: 40%; /* Define el margen superior */
-    padding-bottom: 40%; /* Define el margen inferior */
+    margin-top: 25%; /* Define el margen superior */
+    padding-bottom: 25%; /* Define el margen inferior */
 }
 
 
@@ -80,8 +83,8 @@ a { /*texto dentro de los botones*/
     background: rgb(255, 255, 255);
     max-width: 92%;
     width: 300rem;
-    padding-top: 50px;
-    padding: 50px;
+    padding-top: 10px;
+    padding: 10px; 
 }
 
 .blockpass{ /*ojo de las contraseñas*/
@@ -137,14 +140,28 @@ a { /*texto dentro de los botones*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.4);
+    margin-top: 20px; /* Reduce el margen superior del formulario */
+    margin-bottom: 20px; /* Reduce el margen inferior del formulario*/
+    padding: 30px; /* Ajusta el relleno del formulario según sea necesario*/
 }
 
 /* --------------ESTILOS DEL INICIO DE SESION------------------- */
 
-.form_inicio { /*div principal*/
-    margin-top: auto;
-    padding-top: auto;
+.form_inicio .form_container{ /*div principal*/
+    margin-top: 3%;
     max-height: 300rem;
+    padding-top: 10px;
+    padding: 10px; 
+    
+}
+
+/* --------------ESTILOS DEL REGISTRO------------------- */
+
+.form_registro .container-fluid .form_container{ /*div principal del reg*/
+    margin-top: 3%;
+    max-height: 300rem;
+    padding-top: 10%;   
+    padding: 10%;
     
 }
 
@@ -153,7 +170,10 @@ a { /*texto dentro de los botones*/
 @media (max-width:990px) {
     body{
         background-position-y: +180px;
-        background: rgb(104, 156, 216);
+        background-image: url(../gargantua.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     
 }
@@ -164,7 +184,11 @@ a { /*texto dentro de los botones*/
         background-size: 100%;
         background-repeat: no-repeat;
         background-position-x: center;
-        background: rgb(104, 156, 216);
+        background-image: url(../gargantua.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
     }
 
     

@@ -11,13 +11,13 @@
     <title>Prueba del Formulario</title>
 </head>
 <body>
-                                <!-- REGISTRO INICIAL EN LA BASE DE DATOS -->
+<!-- REGISTRO INICIAL EN LA BASE DE DATOS -->
 
-  <div class="container mt-5 global_form">
+  <div class="form_registro container mt-5 global_form">
     <div class=" container-fluid form_container">
       
       <!-- comienzo del formulario -->
-      <form class="m-5 form_class padding: 50px;" method="POST" action="valid_regist.php" autocomplete = "off">
+      <form class="m-5 form_class" method="POST" action="valid_regist.php" autocomplete = "off">
         <div class="row justify-content-center formlog_row" align="center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
             <h2 class="formlog_title" style="text-transform: uppercase; font-weight: 700;">Registro</h2>
