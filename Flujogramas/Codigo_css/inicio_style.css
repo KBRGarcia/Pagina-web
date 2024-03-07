@@ -28,6 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15.5%;
 }
 
 .menu li {
@@ -90,12 +91,14 @@ body {
 }
 
 div .copyright { /*div general de copyright*/
-    color: rgb(233, 232, 232);
+    color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
-    margin: 5%;
     padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
 }
 
 /*---------------------ESTILOS DE LA PAGINA DE CONTACTOS---------------------*/

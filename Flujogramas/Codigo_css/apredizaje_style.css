@@ -52,10 +52,6 @@ body {
     justify-content: center;
 }
 
-/* .position-absolute {
-    height: 60vh;
-} */
-
 .titulo_nombre { /*div del titilo de todas las rutas de aprendizaje*/
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
@@ -76,23 +72,7 @@ body {
     margin-top: 20px;
 }
 
-.titulo { /*titulos de los diagramas*/
-    height: 60px;
-    width: 450px;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.texto { /*contenido de los diagramas*/
-    height: 60px;
-    width: 350px;
+.titulo, .texto {
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
@@ -101,6 +81,13 @@ body {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
+    word-wrap: break-word; /* Permite que las palabras se dividan para ajustarse al contenedor */
+    max-width: none; /* Elimina la restricción de ancho máximo */
+}
+
+.titulo { /*titulos de los diagramas*/
+    background-color: #770000; /* Cambia el color de fondo de los títulos */
+    font-size: 1.4em; /* Aumenta el tamaño del texto de los títulos */
 }
 
 .texto:hover { /*hover del contenido de los diagramas*/
@@ -108,15 +95,17 @@ body {
 }
 
 .titulo:hover { /*hover del titulos de los diagramas*/
-    background-color: #555;
+    background-color: #b92323;
 }
 
 /*---------------------DIV DEL COPYRIGHT DE THE GHOST*/
 div .copyright {
-    color: rgb(233, 232, 232);
+    color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    width: 102%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
 }
