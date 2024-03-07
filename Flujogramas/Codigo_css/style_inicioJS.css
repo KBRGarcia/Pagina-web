@@ -15,7 +15,7 @@ body {
     background-position: center;
 }
 
-.enlace_inicio a {
+.enlace_inicio a { /*enlaces del inicio*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,11 +27,11 @@ body {
     margin-left: 2%;
 }
 
-.enlace_inicio a:hover {
+.enlace_inicio a:hover { /*hover del inicio*/
     color: #ff1252;
 }
 
-.logo_js a {
+.icono_ruta a { /*icono de las rutas de aprondizajes*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,29 +43,29 @@ body {
     margin-left: 40%;
 }
 
-.logo_js a:hover {
+.icono_ruta a:hover { /*hover del icono de las rutas de aprondizajes*/
     color: #ff1252;
 }
 
-.titulo {
+.titulo { /*titulo de la pagina*/
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
-    margin: 5%;
     padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: -4%;
 }
 
-.sub_titulo {
+.sub_titulo { /*subtitulos de las paginas*/
     color: #fff;
     align-content: center;
 }
 
-div .copyright {
+div .copyright { /*estilos del copyright*/
     color: rgb(233, 232, 232);
     background:rgba(128, 128, 128, 0.8);
     margin: 5%;

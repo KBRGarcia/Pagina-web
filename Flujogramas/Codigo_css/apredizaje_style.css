@@ -60,12 +60,11 @@ body {
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
+    text-align: center;
 }
 
 /*---------------------DIAGRAMAS DE FLUJO---------------------*/
@@ -119,5 +118,5 @@ div .copyright {
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
-    width: 100%;    
+    width: 102%;    
 }
