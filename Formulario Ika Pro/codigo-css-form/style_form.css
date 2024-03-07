@@ -36,16 +36,15 @@ body {
 
 div .copyright { /*el copyright del final de la pagian*/
     color: rgb(233, 232, 232);
-    background:rgba(0, 0, 0, 0.2);
+    background:rgba(128, 128, 128, 0.4);
     bottom: 0;
     margin: 5%;
     padding: 2.5%;
     padding-left: 2.5;
     padding-right: 2.5;
     margin-top: 20px; /* Reduce el margen superior del div de derechos de autor */
-    margin-bottom: 20px; /* Reduce el margen inferior del div de derechos de autor */
+    margin-bottom: 10px; /* Reduce el margen inferior del div de derechos de autor */
     padding: 10px; /* Ajusta el relleno del div de derechos de autor según sea necesario */
-    /* border-radius: 20px; */
 }
 
 a { /*texto dentro de los botones*/
@@ -62,7 +61,7 @@ a { /*texto dentro de los botones*/
 }
 
 .titulo { /*estilos del titulo del login*/
-    color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
 }
 
 /* -------------ESTILOS GENERALES DE LOS 2 FORMULARIOS-------------- */
@@ -152,7 +151,6 @@ a { /*texto dentro de los botones*/
     max-height: 300rem;
     padding-top: 10px;
     padding: 10px; 
-    
 }
 
 /* --------------ESTILOS DEL REGISTRO------------------- */

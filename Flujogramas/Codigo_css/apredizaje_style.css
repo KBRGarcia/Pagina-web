@@ -1,3 +1,4 @@
+/*---------------------ESTILOS GENERALES---------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -19,12 +20,12 @@ body {
     
 }
 
-.container-fluid {
+.container-fluid { /*div general*/
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.enlace_inicio a {
+.enlace_inicio a { /*boton de inicio*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,24 +36,27 @@ body {
     color: #111;
     margin-top: 3%;
     margin-bottom: 0;
+    margin-left: 4%;
 }
 
-.enlace_inicio a:hover {
+.enlace_inicio a:hover { /*el hover del boton de inicio*/
     color: #ff1252;
 }
 
-.diagrama {
+/*---------------------ESTILOS GENERALES---------------------*/
+
+.diagrama { /*todos los diagramas*/
     margin-top: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.position-absolute {
+/* .position-absolute {
     height: 60vh;
-}
+} */
 
-.titulo_nombre {
+.titulo_nombre { /*div del titilo de todas las rutas de aprendizaje*/
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
@@ -64,14 +68,16 @@ body {
     width: 100%;
 }
 
-#flowchart {
+/*---------------------DIAGRAMAS DE FLUJO---------------------*/
+
+#flowchart { /*div general de los digramas*/
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-.titulo {
+.titulo { /*titulos de los diagramas*/
     height: 60px;
     width: 450px;
     align-items: center;
@@ -85,7 +91,7 @@ body {
     font-size: 1.2em;
 }
 
-.texto {
+.texto { /*contenido de los diagramas*/
     height: 60px;
     width: 350px;
     align-items: center;
@@ -98,14 +104,15 @@ body {
     cursor: pointer;
 }
 
-.texto:hover {
+.texto:hover { /*hover del contenido de los diagramas*/
     background-color: #555;
 }
 
-.titulo:hover {
+.titulo:hover { /*hover del titulos de los diagramas*/
     background-color: #555;
 }
 
+/*---------------------DIV DEL COPYRIGHT DE THE GHOST*/
 div .copyright {
     color: rgb(233, 232, 232);
     background:rgba(128, 128, 128, 0.3);

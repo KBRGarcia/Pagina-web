@@ -166,7 +166,7 @@
           
         </fieldset>
       </form>
-    </div>
+    </div><br><br><br>
     <div class="copyright">
 			<div class="row">
 				<div class="the_ghost">

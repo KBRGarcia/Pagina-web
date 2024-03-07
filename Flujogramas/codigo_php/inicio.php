@@ -15,6 +15,8 @@
 <body> 
     
     <div class="container">
+
+        <!-- Menu circular -->
         <div class="row">
             <div class="menu">
                 <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
@@ -46,6 +48,8 @@
         </div>
         <hr>
         <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <!-- El copyright del The Ghost -->
         <div class="copyright">
             <div class="row">
                 <div class="the_ghost">
