@@ -1,0 +1,494 @@
+-------------------------------------------Comandos de Docker-------------------------------------------
+
+docker pull <image_name>:
+  Descarga una imagen de Docker desde un repositorio público o privado.
+
+docker run <image_name>:
+  Ejecuta un contenedor basado en una imagen específica.
+
+docker ps:
+  Muestra los contenedores en ejecución.
+
+docker ps -a:
+  Muestra todos los contenedores, incluso los detenidos.
+
+docker stop <container_id or container_name>:
+  Detiene un contenedor en ejecución.
+
+docker start <container_id or container_name>:
+  Inicia un contenedor detenido.
+
+docker rm <container_id or container_name>:
+  Elimina un contenedor.
+
+docker images:
+  Lista todas las imágenes de Docker disponibles localmente.
+
+docker rmi <image_name or image_id>:
+  Elimina una imagen de Docker.
+
+docker build <path_to_Dockerfile>:
+  Construye una imagen de Docker a partir de un Dockerfile.
+
+docker-compose up:
+  Construye y levanta servicios definidos en un archivo docker-compose.yml.
+
+docker-compose down:
+  Detiene y elimina los servicios definidos en un archivo docker-compose.yml.
+
+docker exec -it <container_id or container_name> <command>:
+  Ejecuta un comando dentro de un contenedor en ejecución.
+
+docker inspect <container_id or container_name>:
+  Muestra información detallada sobre un contenedor.
+
+docker logs <container_id or container_name>:
+  Muestra los registros de salida de un contenedor.
+
+docker network ls:
+  Lista las redes de Docker disponibles en el sistema.
+
+docker network create <network_name>:
+  Crea una nueva red de Docker.
+
+docker network connect <network_name> <container_id or container_name>:
+  Conecta un contenedor a una red específica.
+
+docker volume ls:
+  Lista los volúmenes de Docker disponibles en el sistema.
+
+docker volume create <volume_name>:
+  Crea un nuevo volumen de Docker.
+
+docker volume rm <volume_name>:
+  Elimina un volumen de Docker.
+
+docker cp <local_file> <container_id>:
+  ntainer_path>:
+
+  Copia archivos entre el sistema local y un contenedor.
+
+docker-compose build:
+  Construye servicios definidos en un archivo docker-compose.yml.
+
+docker-compose up -d:
+  Construye y levanta servicios en segundo plano.
+
+docker-compose stop:
+  Detiene servicios definidos en un archivo docker-comp
+
+docker-compose restart:
+  Reinicia servicios definidos en un archivo docker-compose.yml.
+
+docker-compose exec <service_name> <command>:
+  Ejecuta un comando dentro de un servicio en ejecución.
+
+docker-compose logs <service_name>:
+  Muestra los registros de salida de un servicio.
+
+docker-compose down -v:
+  Detiene y elimina servicios y volúmenes definidos en un archivo docker-compose.yml.
+
+docker stats:
+  Muestra el uso de recursos de los contenedores en ejecución.
+
+docker system prune:
+  Limpia recursos no utilizados, como contenedores detenidos y redes no utilizadas.
+
+docker swarm init:
+  Inicializa un clúster de Docker Swarm en el nodo actual.
+
+docker swarm join:
+  Une un nodo al clúster de Docker Swarm.
+
+docker service ls:
+  Lista los servicios en ejecución en un clúster de Docker Swarm.
+
+docker service create:
+  Crea un nuevo servicio en un clúster de Docker Swarm.
+
+docker service scale:
+  Escala el número de réplicas de un servicio en un clúster de Docker Swarm.
+
+docker service update:
+  Actualiza la configuración de un servicio en un clúster de Docker Swarm.
+
+docker stack deploy:
+  Despliega una aplicación definida en un archivo docker-compose.yml en un clúster de Docker Swarm.
+
+docker node ls:
+  Lista los nodos en un clúster de Docker Swarm.
+
+docker node inspect:
+  Muestra información detallada sobre un nodo en un clúster de Docker Swarm.
+
+docker login:
+  Inicia sesión en un registro de Docker.
+
+docker logout:
+  Cierra sesión en un registro de Docker.
+
+docker tag <source_image>:<tag> <target_image>:<tag>:
+  Etiqueta una imagen de Docker con un nuevo nombre y/o etiqueta.
+
+docker push <image_name>:
+  Sube una imagen de Docker a un registro de Docker.
+
+docker pull <registry_url>/<image_name>:<tag>:
+  Descarga una imagen de Docker desde un registro específico.
+
+docker build -t <image_name>:<tag> <path_to_Dockerfile>:
+  Construye una imagen de Docker y le asigna un nombre y etiqueta.
+
+docker run -d <image_name>:
+  Ejecuta un contenedor en segundo plano.
+
+docker run -it <image_name> <command>:
+  Ejecuta un comando interactivo dentro de un contenedor.
+
+docker run -p <host_port>:<container_port> <image_name>:
+  Mapea un puerto del host al puerto del contenedor.
+
+docker run --name <container_name> <image_name>:
+  Asigna un nombre específico a un contenedor al iniciarlo.
+
+docker inspect <image_name or image_id>:
+  Muestra información detallada sobre una imagen de Docker.
+
+docker history <image_name>:
+  Muestra el historial de capas de una imagen de Docker.
+
+docker export <container_id> > <file.tar>:
+  Exporta el sistema de archivos de un contenedor como un archivo TAR.
+
+docker import <file.tar>:
+  Importa un sistema de archivos exportado previamente como una imagen de Docker.
+
+docker commit <container_id> <new_image_name>:
+  Crea una nueva imagen a partir de un contenedor en ejecución.
+
+docker exec <container_id or container_name> <command>:
+  Ejecuta un comando dentro de un contenedor en ejecución.
+
+docker pause <container_id or container_name>:
+  Pausa la ejecución de un contenedor.
+
+docker unpause <container_id or container_name>:
+  Reanuda la ejecución de un contenedor pausado.
+
+docker stats <container_id or container_name>:
+  Muestra el uso de recursos en tiempo real de un contenedor.
+
+docker top <container_id or container_name>:
+  Muestra los procesos en ejecución dentro de un contenedor.
+
+docker events:
+  Muestra eventos de Docker en tiempo real.
+
+docker system df:
+  Muestra el espacio utilizado y disponible en el sistema Docker.
+
+docker system prune -a:
+  Limpia todos los recursos no utilizados, incluidos los volúmenes.
+
+docker search <term>:
+  Busca imágenes de Docker en un registro.
+
+docker port <container_id or container_name>:
+  Muestra los puertos mapeados de un contenedor.
+
+docker wait <container_id or container_name>:
+  Espera a que un contenedor finalice y muestra su código de salida.
+
+docker version:
+  Muestra información sobre la versión de Docker instalada.
+
+docker network inspect <network_name>:
+  Muestra detalles sobre una red de Docker.
+
+docker network disconnect <network_name> <container_id or container_name>:
+  Desconecta un contenedor de una red.
+
+docker volume inspect <volume_name>:
+  Muestra información detallada sobre un volumen de Docker.
+
+docker volume prune:
+  Elimina todos los volúmenes no utilizados.
+
+docker diff <container_id or container_name>:
+  Muestra los cambios en el sistema de archivos de un contenedor en comparación con su imagen base.
+
+docker save <image_name>:<tag> -o <file.tar>:
+  Guarda una imagen de Docker en un archivo TAR.
+
+docker load -i <file.tar>:
+  Carga una imagen de Docker desde un archivo TAR.
+
+docker exec -u <user> <container_id or container_name> <command>:
+  Ejecuta un comando como un usuario específico dentro de un contenedor.
+
+docker inspect --format='{{.State.Status}}' <container_id or container_name>:
+  Obtiene el estado de ejecución de un contenedor.
+
+docker ps -q:
+  Muestra solo los IDs de los contenedores en ejecución.
+
+docker image prune:
+  Elimina las imágenes no utilizadas.
+
+docker volume create --name <volume_name>:
+  Crea un volumen de Docker con un nombre específico.
+
+docker-compose logs -f:
+  Muestra los registros en tiempo real de los servicios definidos en un archivo docker-compose.yml.
+
+
+
+
+
+
+
+  
+
+-------------------------------------------Comandos de WIndows-------------------------------------------
+
+dir:
+  Muestra una lista de archivos y subdirectorios en el directorio actual.
+  
+cd:
+  Cambia el directorio actual.
+  
+cls:
+  Limpia la pantalla del símbolo del sistema.
+  
+copy:
+  Copia uno o más archivos de un lugar a otro.
+  
+del:
+  Elimina uno o más archivos.
+  
+move:
+  Mueve archivos de un lugar a otro.
+  
+ren:
+  Cambia el nombre de un archivo o directorio.
+  
+mkdir:
+  Crea un nuevo directorio.
+  
+rmdir:
+  Elimina un directorio.
+  
+type:
+  Muestra el contenido de un archivo de texto.
+  
+echo:
+  Muestra mensajes o activa/desactiva el eco de comandos.
+  
+ping:
+  Envía paquetes de datos a una dirección IP para probar la conectividad de red.
+  
+ipconfig:
+  Muestra la configuración de red, incluyendo la dirección IP, la puerta de enlace y la máscara de subred.
+  
+netstat:
+  Muestra las conexiones de red, tablas de enrutamiento y estadísticas de interfaz.
+  
+tasklist:
+  Muestra una lista de los procesos en ejecución.
+  
+taskkill:
+  Termina uno o más procesos.
+  
+shutdown:
+  Apaga o reinicia el sistema.
+  
+systeminfo:
+  Muestra información sobre el sistema, incluyendo la versión de Windows y la configuración de hardware.
+  
+sfc /scannow:
+  Escanea y repara archivos de sistema corruptos.
+  
+chkdsk:
+  Comprueba y repara errores en el disco duro.
+  
+format:
+  Formatea un disco o partición.
+  
+xcopy:
+  Copia archivos y directorios con más opciones que el comando "copy".
+  
+find:
+  Busca una cadena de texto en archivos.
+  
+attrib:
+  Muestra o cambia los atributos de archivo.
+  
+diskpart:
+  Gestiona discos, particiones y volúmenes.
+  
+net:
+  Administra recursos de red (usuarios, grupos, impresoras, etc.).
+  
+subst:
+  Asigna una letra de unidad a una ruta de acceso.
+  
+assoc:
+  Muestra o modifica las asociaciones de extensiones de archivo.
+  
+tree:
+  Muestra una estructura de directorios como un árbol.
+  
+powercfg:
+  Configura la administración de energía.
+  
+cipher:
+  Muestra o cambia el cifrado de archivos y directorios en unidades NTFS.
+  
+taskmgr:
+  Abre el Administrador de tareas de Windows.
+  
+msconfig:
+  Abre la Utilidad de Configuración del Sistema de Windows.
+  
+notepad:
+  Abre el Bloc de notas.
+  
+regedit:
+  Abre el Editor del Registro de Windows.
+  
+shutdown:
+  Apaga o reinicia el sistema.
+  
+calc:
+  Abre la calculadora de Windows.
+  
+hostname:
+  Muestra el nombre de host del equipo.
+  
+netsh:
+  Configura parámetros de red.
+  
+tracert:
+  Rastrea la ruta que toman los paquetes de datos hasta su destino.
+  
+assoc:
+  Muestra o modifica las asociaciones de extensiones de archivo.
+  
+chkntfs:
+  Muestra o modifica el chequeo de disco al inicio del sistema.
+  
+color:
+  Cambia los colores del fondo y del texto en la ventana del símbolo del sistema.
+  
+compact:
+  Comprime o descomprime archivos en NTFS.
+  
+convert:
+  Convierte volúmenes FAT a NTFS.
+  
+date:
+  Muestra o establece la fecha del sistema.
+  
+defrag:
+  Desfragmenta el disco duro.
+  
+driverquery:
+  Muestra una lista de los controladores instalados en el sistema.
+  
+hostname:
+  Muestra el nombre de host del equipo.
+  
+logoff:
+  Cierra la sesión actual del usuario.
+  
+mode:
+  Configura dispositivos de sistema.
+  
+netstat:
+  Muestra las conexiones de red, tablas de enrutamiento y estadísticas de interfaz.
+  
+path:
+  Muestra o establece la variable de entorno de ruta de acceso.
+  
+pause:
+  Detiene temporalmente la ejecución de un script por un período de tiempo.
+  
+print:
+  Imprime un archivo de texto en una impresora.
+  
+prompt:
+  Personaliza el texto del indicador del símbolo del sistema.
+  
+quser:
+  Muestra la información de los usuarios que están conectados al sistema.
+  
+reg:
+  Realiza operaciones en el Registro de Windows.
+  
+replace:
+  Reemplaza archivos.
+  
+rmdir /s:
+  Elimina un directorio y su contenido de forma recursiva.
+  
+set:
+  Muestra, establece o elimina variables de entorno.
+  
+setx:
+  Establece variables de entorno persistentes.
+  
+shutdown:
+  Apaga o reinicia el sistema.
+  
+sort:
+  Ordena la salida de un archivo de texto.
+  
+subst:
+  Asigna una letra de unidad a una ruta de acceso.
+  
+systeminfo:
+  Muestra información sobre el sistema, incluyendo la versión de Windows y la configuración de hardware.
+  
+time:
+  Muestra o establece la hora del sistema.
+  
+timeout:
+  Espera un período de tiempo antes de continuar con la ejecución de un script.
+  
+title:
+  Establece el título de la ventana del símbolo del sistema.
+  
+tracert:
+  Rastrea la ruta que toman los paquetes de datos hasta su destino.
+  
+type:
+  Muestra el contenido de un archivo de texto.
+  
+ver:
+  Muestra la versión de Windows.
+  
+vol:
+  Muestra el nombre y el número de serie del volumen del disco.
+  
+whoami:
+  Muestra información sobre el usuario y el grupo de seguridad actuales.
+  
+wmic:
+  Ejecuta comandos específicos de Instrumental de Administración de Windows (WMI).
+  
+xcopy:
+  Copia archivos y directorios con más opciones que el comando "copy".
+  
+break:
+  Establece o elimina el control de interrupción en un script por lotes.
+  
+deltree:
+  Elimina un directorio y su contenido de forma recursiva (similar a rmdir /s).
+  
+expand:
+  Expande uno o más archivos comprimidos.
+  
+help:
+  Proporciona información sobre los comandos de Windows.
+  
