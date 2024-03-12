@@ -491,4 +491,383 @@ expand:
   
 help:
   Proporciona información sobre los comandos de Windows.
+
+
+
+
+
+
+
   
+
+  -------------------------------------------Comandos de GIT-------------------------------------------  
+
+  git init:
+  Inicializa un nuevo repositorio Git en un directorio.
+  
+git clone [URL]:
+  Clona un repositorio Git existente desde una URL remota hacia tu sistema local.
+  
+git add [archivos]:
+  Añade archivos al área de preparación (staging) para ser incluidos en el próximo commit.
+  
+git commit -m "[mensaje]":
+  Realiza un commit con los archivos previamente añadidos al área de preparación, incluyendo un mensaje descriptivo.
+  
+git status:
+  Muestra el estado actual del repositorio, incluyendo archivos modificados, añadidos o eliminados, así como archivos en el área de preparación.
+  
+git log:
+  Muestra un historial de commits, incluyendo el autor, la fecha y el mensaje de cada commit.
+  
+git branch:
+  Lista todas las ramas en el repositorio. Agregando un nombre de rama después del comando, puedes crear una nueva rama.
+  
+git checkout [rama]:
+  Cambia a la rama especificada.
+  
+git merge [rama]:
+  Fusiona los cambios de una rama con la rama actual.
+  
+git pull:
+  Descarga los cambios desde el repositorio remoto y los fusiona con tu rama actual.
+  
+git push:
+  Sube los commits locales al repositorio remoto.
+  
+git remote -v:
+  Muestra las URL de los repositorios remotos asociados con tu repositorio local.
+  
+git diff:
+  Muestra las diferencias entre los archivos en el directorio de trabajo y los archivos en el área de preparación.
+  
+git reset [archivo]:
+  Quita un archivo del área de preparación, pero conserva los cambios locales.
+  
+git reset --hard:
+  Restablece el estado del directorio de trabajo y del área de preparación a la última confirmación.
+  
+git tag [nombre]:
+  Crea un nuevo tag para marcar un punto específico en la historia del repositorio.
+  
+git fetch:
+  Descarga los cambios desde el repositorio remoto, pero no los fusiona con tu rama actual.
+  
+git remote add [nombre] [URL]:
+  Agrega un nuevo repositorio remoto con un nombre específico.
+  
+git remote rm [nombre]:
+  Elimina un repositorio remoto asociado.
+  
+git rm [archivo]:
+  Elimina un archivo del repositorio y del sistema de archivos.
+  
+git mv [archivo_original] [archivo_nuevo]:
+  Cambia el nombre de un archivo en el repositorio.
+  
+git show [objeto]:
+  Muestra información sobre cualquier objeto Git, como un commit, un tag o un commit específico.
+  
+git stash:
+  Guarda temporalmente los cambios locales en una pila de cambios (stash) para que puedas trabajar en otra cosa.
+  
+git stash apply:
+  Aplica el cambio más reciente guardado en la pila de cambios al directorio de trabajo.
+  
+git stash list:
+  Lista todos los cambios guardados en la pila de cambios.
+  
+git stash drop:
+  Elimina el cambio más reciente guardado en la pila de cambios.
+  
+git cherry-pick [commit]:
+  Aplica los cambios de un commit específico a la rama actual.
+  
+git rebase [rama]:
+  Reorganiza la historia del commit para que la rama actual se derive de la rama especificada.
+  
+git bisect:
+  Ayuda a encontrar el commit que introdujo un bug mediante la búsqueda binaria.
+  
+git grep [palabra_clave]:
+  Busca ocurrencias de una palabra clave en los archivos del repositorio.
+  
+git blame [archivo]:
+  Muestra quién modificó por última vez cada línea de un archivo y en qué commit.
+  
+git config:
+  Permite configurar opciones de Git, como el nombre de usuario, el correo electrónico y alias de comandos.
+  
+git log --graph --oneline --decorate:
+  Muestra un historial de commits de manera gráfica y resumida.
+  
+git show-branch:
+  Muestra las ramas y sus últimos commits.
+  
+git remote update:
+  Actualiza la información de los repositorios remotos.
+  
+git archive [rama] --format=zip --output=[archivo.zip]:
+  Crea un archivo ZIP de una rama específica.
+  
+git submodule add [URL]:
+  Agrega un submódulo al repositorio.
+  
+git submodule update --init --recursive:
+  Clona y actualiza todos los submódulos del repositorio.
+  
+git clean -n:
+  Muestra los archivos no rastreados que serán eliminados del directorio de trabajo.
+  
+git bisect:
+  Ayuda a encontrar un commit específico que introdujo un problema al usar una búsqueda binaria.
+  
+git config --global user.name "[nombre]":
+  Establece el nombre de usuario global para los commits.
+  
+git config --global user.email "[email]":
+  Establece el correo electrónico global para los commits.
+  
+git config --global alias.[alias] "[comando]":
+  Crea un alias para un comando Git específico.
+  
+git fetch [repositorio] [rama]:
+  Descarga los cambios de una rama específica de un repositorio remoto.
+  
+git branch -d [rama]:
+  Elimina una rama local después de haber fusionado sus cambios.
+  
+git branch -D [rama]:
+  Forzosamente elimina una rama local, incluso si no se han fusionado los cambios.
+  
+git checkout -b [nueva_rama]:
+  Crea y cambia a una nueva rama en una sola operación.
+  
+git diff [rama1] [rama2]:
+  Muestra las diferencias entre dos ramas.
+  
+git diff --staged:
+  Muestra las diferencias entre los archivos en el área de preparación y el último commit.
+  
+git log --author="[autor]":
+  Filtra el historial de commits por autor.
+  
+git log --since="[fecha]":
+  Muestra los commits realizados desde una fecha específica.
+  
+git log --until="[fecha]":
+  Muestra los commits realizados hasta una fecha específica.
+  
+git log --grep="[palabra_clave]":
+  Filtra el historial de commits por una palabra clave en el mensaje del commit.
+  
+git remote show [nombre_repositorio]:
+  Muestra información detallada sobre un repositorio remoto.
+  
+git remote prune origin:
+  Elimina las referencias locales a ramas remotas eliminadas.
+  
+git tag -a [nombre] -m "[mensaje]":
+  Crea un nuevo tag anotado con un mensaje.
+  
+git tag -d [nombre]:
+  Elimina un tag local.
+  
+git push --tags:
+  Sube todos los tags locales al repositorio remoto.
+  
+git checkout -- [archivo]:
+  Desecha los cambios no confirmados en un archivo.
+  
+git revert [commit]:
+  Deshace los cambios introducidos por un commit específico, creando un nuevo commit que revierte esos cambios.
+  
+git reflog:
+  Muestra un registro de las referencias de Git que han sido modificadas en el repositorio.
+  
+git show-ref:
+  Muestra las referencias de Git (branches, tags, etc.) junto con sus hashes.
+  
+git remote rename [nombre_actual] [nuevo_nombre]:
+  Cambia el nombre de un repositorio remoto.
+  
+git rm --cached [archivo]:
+  Elimina un archivo del área de preparación pero lo conserva en el sistema de archivos.
+  
+git shortlog:
+  Muestra un resumen de commits, agrupados por autor.
+  
+git clean -f:
+  Elimina de forma forzada los archivos no rastreados del directorio de trabajo.
+  
+git clean -fd:
+  Elimina de forma forzada los archivos no rastreados y los directorios vacíos del directorio de trabajo.
+  
+git log --oneline:
+  Muestra un historial de commits en una sola línea por commit.
+  
+git log --graph:
+  Muestra un gráfico ASCII de la historia de ramificaciones y fusiones.
+  
+git merge --abort:
+  Cancela un proceso de fusión en caso de conflicto.
+  
+git rebase -i [rama]:
+  Inicia un rebase interactivo para reorganizar commits en la rama actual.
+  
+git remote set-url [nombre_repositorio] [nueva_URL]:
+  Cambia la URL de un repositorio remoto.
+  
+git reset [commit]:
+  Deshace los commits posteriores a un commit específico, manteniendo los cambios en el directorio de trabajo.
+  
+git reset --soft [commit]:
+  Deshace los commits posteriores a un commit específico, moviendo los cambios al área de preparación.
+  
+git reset --mixed [commit]:
+  Deshace los commits posteriores a un commit específico, pero conserva los cambios en el directorio de trabajo sin añadirlos al área de preparación.
+  
+git log --follow [archivo]:
+  Muestra el historial de cambios de un archivo, incluso si ha sido renombrado.
+  
+git rebase --continue:
+  Continúa con un proceso de rebase después de resolver conflictos.
+  
+git rebase --skip:
+  Omite un commit en un proceso de rebase después de resolver conflictos.
+  
+git add -p:
+  Añade interactivamente partes de cambios en archivos al área de preparación.
+  
+git stash pop:
+  Aplica el cambio más reciente guardado en la pila de cambios y lo elimina de la pila.
+  
+
+
+
+
+
+
+
+  
+
+  -------------------------------------------Comandos de MacOS-------------------------------------------  
+ls:
+  Lista los archivos y directorios en el directorio actual.
+
+cd:
+  Cambia el directorio de trabajo.
+
+pwd:
+  Muestra el directorio de trabajo actual.
+
+mkdir:
+  Crea un nuevo directorio.
+
+touch:
+  Crea un nuevo archivo vacío o actualiza la fecha de acceso y modificación de un archivo existente.
+
+rm:
+  Elimina archivos o directorios.
+
+cp:
+  Copia archivos y directorios.
+
+mv:
+  Mueve o renombra archivos y directorios.
+
+cat:
+  Concatena y muestra contenido de archivos.
+
+more:
+  Muestra el contenido de un archivo página por página.
+
+less:
+  Muestra el contenido de un archivo de manera interactiva, permitiendo desplazarse hacia arriba y hacia abajo.
+
+grep:
+  Busca patrones en archivos.
+
+find:
+  Busca archivos y directorios.
+
+chmod:
+  Cambia los permisos de archivos y directorios.
+
+chown:
+  Cambia el propietario y el grupo de archivos y directorios.
+
+ps:
+  Muestra los procesos en ejecución.
+
+kill:
+  Envía una señal a un proceso para finalizarlo.
+
+top:
+  Muestra información sobre los procesos y su uso de recursos en tiempo real.
+
+sudo:
+  Ejecuta un comando con privilegios de superusuario.
+
+df:
+  Muestra el espacio en disco disponible en los sistemas de archivos.
+
+tar:
+  Crea, modifica y extrae archivos comprimidos en formato tar.
+
+gzip:
+  Comprime o descomprime archivos utilizando el algoritmo de compresión gzip.
+
+gunzip:
+  Descomprime archivos comprimidos con gzip.
+
+zip:
+  Crea archivos comprimidos en formato zip.
+
+unzip:
+  Extrae archivos de un archivo comprimido en formato zip.
+
+curl:
+  Permite transferir datos desde o hacia un servidor utilizando diferentes protocolos.
+
+ssh:
+  Conecta a un servidor remoto utilizando el protocolo SSH.
+
+scp:
+  Copia archivos de forma segura entre sistemas a través de SSH.
+
+rsync:
+  Sincroniza archivos y directorios entre sistemas de forma eficiente.
+
+ping:
+  Envía paquetes ICMP a un host para verificar su accesibilidad y tiempo de respuesta.
+
+traceroute:
+  Muestra la ruta que siguen los paquetes para llegar a un host específico.
+
+whois:
+  Obtiene información sobre un nombre de dominio o una dirección IP desde una base de datos Whois.
+
+hostname:
+  Muestra o configura el nombre del sistema.
+
+uptime:
+  Muestra el tiempo que ha estado encendido el sistema y carga promedio.
+
+date:
+  Muestra o configura la fecha y la hora del sistema.
+
+cal:
+  Muestra un calendario del mes actual o de un mes específico.
+
+history:
+  Muestra el historial de comandos ejecutados anteriormente en la Terminal.
+
+echo:
+  Muestra texto en la salida estándar o redirige texto a un archivo.
+
+wc:
+  Cuenta líneas, palabras y caracteres en un archivo.
+
+nano:
+  Editor de texto en la Terminal para editar archivos de texto de manera sencilla.
