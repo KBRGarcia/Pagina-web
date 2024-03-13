@@ -25,7 +25,7 @@ body {
     margin-bottom: 0;
 }
 
-.enlace_inicio a { /*boton de inicio*/
+.enlace_inicio a { /*boton de inicio de los archivos JS 1 y 2, Linux 1 y 2, windows, macOS, docker, git, Node, laravel */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +41,20 @@ body {
 
 .enlace_inicio a:hover { /*el hover del boton de inicio*/
     color: #ff1252;
+}
+
+.icono_ruta a ion-icon { /*tamaño de los iconos dentro del boton del enlace a inicio*/
+    width: 80%;
+    height: 80%;
+}
+
+.enlace_inicio a ion-icon { /*tamaño de los iconos dentro del boton del enlace a inicio*/
+    width: 60%;
+    height: 60%;
+}
+
+.un_enlace_inicio {
+    margin-left: 5%;
 }
 
 /*---------------------ESTILOS GENERALES---------------------*/
@@ -117,14 +131,4 @@ div .copyright {
     align-items: center;
     width: auto;
     text-align: center;
-}
-
-.icono_ruta a ion-icon {
-    width: 80%;
-    height: 80%;
-}
-
-.enlace_inicio a ion-icon {
-    width: 60%;
-    height: 60%;
 }
