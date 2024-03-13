@@ -113,9 +113,9 @@ body {
     background: #fff;
     border-radius: 50%;
     color: #111;
-    margin-top: 25%;
+    margin-top: 5%;
     margin-bottom: 0;
-    margin-left: 20%;
+    margin-left: 45%;
     
 }
 
@@ -219,6 +219,16 @@ div .direccion:hover { /*el hover del div de la direccion de nuestras oficinas*/
 .enviar_correo:hover { /*hover del boton de enviar del correo*/
     background-color: var(--bottom-hover);
     border-color: var(--bottom-hover);
+}
+
+.icono_ruta a ion-icon {
+    width: 80%;
+    height: 80%;
+}
+
+.enlace_inicio a ion-icon {
+    width: 60%;
+    height: 60%;
 }
 
 /*-----------------------------EN PROCESO, AL PARECER NO SE ENCUENTRA EN LA PAGINA LA REFERENCIA DE LA CLASE-----------------------------*/

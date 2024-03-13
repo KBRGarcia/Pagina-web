@@ -9,108 +9,76 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
     <!-- enlace propio -->
-    <link rel="stylesheet" href="./style_info.css">
+    <link rel="stylesheet" href="../Codigo_css/style_inicioJS.css">
 
-    <title>Contactanos - The Ghost</title>
+    <title>Aprendizaje extra</title>
 </head>
 <body>
 
     <div class="container-fluid">
-
-        <!-- titulo del apartado de contactanos -->
         <div class="row d-flex justify-content-center">
-            <div class="titulo text-center">
-                <h1>Contáctanos</h1>
-            </div>
+            <h1 class="col titulo text-center">Aprendizaje extra</h1>
         </div>
-
-        <!-- enlace para ir al inicio y al fantasmita -->
-        <div class="row d-flex justify-content-center">            
-            <div class="enlace_inicio">
-                <a href="../Codigo_php/inicio.php"><ion-icon name="home-outline"></ion-icon></a>
-            </div>
-            <div class=" enlace_inicio">
-                <a href="../Fantasmita/fantasmita.html"><ion-icon name="logo-snapchat"></ion-icon></a>
-            </div>
+        <div class="row enlace_inicio">
+            <a href="../codigo_php/inicio.php"><ion-icon name="home-outline"></ion-icon></a>
         </div>
-
-        <!-- la direccion de la empresa y para enviar un mensaje a un correo -->
-        <div class="row d-flex justify-content-center">
-
-            <!-- direccion de la empresa -->
-            <div class="direccion col text-center">
-                <p>Instituto Venezolano de INvestigaciones Científicas (IVIC)</p>
-                <p>Carr. Panamericana, Parroquia Macarao 1204, Miranda</p>
-                <p>Coordenadas: 10.398819984045886, -66.96520871534399</p>
-            </div>
-
-            <!-- para enviar el correo -->
-            <div class="mensaje col d-flex justify-content-center">
-                <form action="enviar.php" method="POST">
-                    <div class="row d-flex justify-content-center">
-                            <textarea class="asunto" name="asunto" placeholder="Asunto..." required></textarea>
-                            <textarea class="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                    </div><br>
-                    <div class="row justify-content-center formlog_row" align="center">
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
-                            <button type="submit" class="enviar_correo btn btn-primary" name="texto">
-                                <a style="text-decoration: none; color: #fff;">Enviar</a>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- menu desplegable donde aparecen todas la redes sociales de la empresa -->
-        <div class="row d-flex justify-content-center">
-            <div class="menu">
-                <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
-                <li style="--i:0;">
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                </li>
-                <li style="--i:1;">
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                </li>
-                <li style="--i:2;">
-                    <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
-                </li>
-                <li style="--i:3;">
-                    <a href="#"><ion-icon name="logo-twitch"></ion-icon></a>
-                </li>
-                <li style="--i:4;">
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                </li>
-                <li style="--i:5;">
-                    <a href="#"><ion-icon name="logo-discord"></ion-icon></a>
-                </li>
-                <!-- <li style="--i:6;">
-                    <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
-                </li> -->
-                <li style="--i:7;">
-                    <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                </li>
-            </div>
-        </div>
-
-        <div class="row d-flex justify-content-center">
-            <div id="copyright" class="copyright">
-                <div class="row">
-                    <div class="the_ghost">
-                        <h6>The Ghost. © 2024 Copyright. Todos los Derechos Reservados.</h6>
-                    </div>          
+        <br><br>
+        <div class="row info_varios">
+            <div class="col">
+                <h4 class="sub_titulo">Comandos de Docker</h4>
+                <div id="logo_js1" class="row icono_ruta text-center">
+                    <a href="../Codigo_html/apredizaje_JS1.html"><ion-icon name="logo-docker"></ion-icon></a>
                 </div>
-                <div class="row">
-                    <div class="the_ghost">
-                        <h6>Technology and computer science and systems corporation</h6>
-                    </div>
+            </div>
+            <div class="col">
+                <h4 class="sub_titulo">Comandos de GIT</h4>
+                <div id="logo_js2" class="row icono_ruta text-center">
+                    <a href="../Codigo_html/apredizaje_JS2.html"><ion-icon name="logo-github"></ion-icon></a>
                 </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row info_varios">
+            <div class="col">
+                <h4 class="sub_titulo">Comandos del CMD de Windows</h4>
+                <div id="logo_js1" class="row icono_ruta text-center">
+                    <a href="../Codigo_html/apredizaje_JS1.html"><ion-icon name="logo-windows"></ion-icon></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4 class="sub_titulo">Comandos de la Terminal de MacOS</h4>
+                <div id="logo_js2" class="row icono_ruta text-center">
+                    <a href="../Codigo_html/apredizaje_JS2.html"><ion-icon name="logo-apple"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row info_varios">
+            <div class="col">
+                <h4 class="sub_titulo">Próximamente Node.JS...</h4>
+                <div id="logo_js1" class="row icono_ruta text-center">
+                    <a href="../Codigo_html/apredizaje_JS1.html"><ion-icon name="logo-nodejs"></ion-icon></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4 class="sub_titulo">Próximamente Laravel...</h4>
+                <div id="logo_js2" class="row icono_ruta text-center">
+                    <a href="../Codigo_html/apredizaje_JS2.html"><ion-icon name="logo-laravel"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="copyright">
+            <div class="the_ghost">
+                <h5>The Ghost. © 2024 Copyright. Todos los Derechos Reservados.</h5>
+                <h6>Technology and computer science and systems corporation</h6>
             </div>
         </div>
     </div>
-
-
-
 
     <!-- enlaces para los iconos de https://ionic.io/ionicons -->
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
@@ -123,7 +91,5 @@
     <!-- enlace para usar bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- enlace para usar el JS propio -->
-    <script src="./contactos.js"></script>
 </body>
 </html>

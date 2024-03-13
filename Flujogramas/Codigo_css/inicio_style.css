@@ -118,15 +118,20 @@ div .mensaje form textarea {
     margin-bottom: 10px;
   }
   
-  div .mensaje form button {
+div .mensaje form button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-  }
+}
   
-  div .mensaje form button:hover {
+div .mensaje form button:hover {
     background-color: #0056b3;
-  }
+}
+
+li a ion-icon {
+    width: 60%;
+    height: 60%;
+}

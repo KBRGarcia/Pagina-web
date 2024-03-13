@@ -19,12 +19,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #fff;
     border-radius: 50%;
     color: #111;
-    margin-left: 4%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 5%;
 }
 
 .enlace_inicio a:hover { /*hover del inicio*/
@@ -35,8 +37,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #fff;
     border-radius: 50%;
     color: #111;
@@ -65,20 +67,37 @@ body {
 }
 
 div .copyright { /*estilos del copyright*/
-    color: rgb(255, 255, 255);
+    color: rgb(233, 232, 232);
     background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    text-align: center;
+    padding-left: 2.5;
+    padding-right: 2.5;
+    width: 100%;
 }
 
-div .info_js  {
+div .info_js  { /*div de las rutas de aprendizajes de Linux y JS*/
     color: rgb(177, 177, 177);
     background:rgba(128, 128, 128, 0.15);
     margin: 3%;
     padding: 2.5%;
     border-radius: 20px;
+}
+
+div .info_varios  { /*div de las rutas de aprendizajes y comandos de los demas temas*/
+    color: rgb(177, 177, 177);
+    background:rgba(128, 128, 128, 0.15);
+    margin: 3%;
+    margin-top: 0;
+    padding: 2.5%;
+    border-radius: 20px;
+}
+
+.enlace_inicio a ion-icon { /*iconos dentro de los botones*/
+    width: 60%;
+    height: 60%;
+}
+
+.icono_ruta a ion-icon { /*iconos dentro de los botones*/
+    width: 70%;
+    height: 70%;
 }

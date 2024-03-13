@@ -34,9 +34,9 @@ body {
     background: #fff;
     border-radius: 50%;
     color: #111;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-bottom: 0;
-    margin-left: 4%;
+    margin-left: 45%;
 }
 
 .enlace_inicio a:hover { /*el hover del boton de inicio*/
@@ -72,7 +72,7 @@ body {
     margin-top: 20px;
 }
 
-.titulo, .texto {
+.titulo, .texto, .supertitulo {
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
@@ -83,6 +83,11 @@ body {
     cursor: pointer;
     word-wrap: break-word; /* Permite que las palabras se dividan para ajustarse al contenedor */
     max-width: none; /* Elimina la restricción de ancho máximo */
+}
+
+.supertitulo {
+    background-color: #420000; /* Cambia el color de fondo de los títulos */
+    font-size: 2em; /* Aumenta el tamaño del texto de los títulos */
 }
 
 .titulo { /*titulos de los diagramas*/
@@ -98,6 +103,10 @@ body {
     background-color: #b92323;
 }
 
+.supertitulo:hover {
+    background-color: #b92323;
+}
+
 /*---------------------DIV DEL COPYRIGHT DE THE GHOST*/
 div .copyright {
     color: rgb(255, 255, 255);
@@ -108,4 +117,14 @@ div .copyright {
     align-items: center;
     width: auto;
     text-align: center;
+}
+
+.icono_ruta a ion-icon {
+    width: 80%;
+    height: 80%;
+}
+
+.enlace_inicio a ion-icon {
+    width: 60%;
+    height: 60%;
 }
