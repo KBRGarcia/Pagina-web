@@ -210,3 +210,8 @@ input:focus+.ghost {
 .enlace_inicio a:hover {
     color: #ff1252;
 }
+
+.icono_ruta a ion-icon { /*iconos dentro de los botones*/
+    width: 70%;
+    height: 70%;
+}

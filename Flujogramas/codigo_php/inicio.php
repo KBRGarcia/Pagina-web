@@ -39,7 +39,7 @@
                     <a href="../Codigo_html/apredizaje_CSS.html"><ion-icon name="logo-css3"></ion-icon></a>
                 </li>
                 <li style="--i:6;">
-                    <a href="../Info_contac/contactos.html"><ion-icon name="extension-puzzle"></ion-icon></a>
+                    <a href="../Codigo_html/aprendizaje_Varios.html"><ion-icon name="extension-puzzle"></ion-icon></a>
                 </li>
                 <li style="--i:7;">
                     <a href="../Info_contac/info.html"><ion-icon name="information-circle-outline"></ion-icon></a>
