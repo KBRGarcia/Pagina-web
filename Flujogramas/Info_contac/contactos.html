@@ -16,12 +16,15 @@
 <body>
 
     <div class="container-fluid">
+
+        <!-- titulo del apartado de contactanos -->
         <div class="row d-flex justify-content-center">
             <div class="titulo text-center">
                 <h1>Contáctanos</h1>
             </div>
         </div>
 
+        <!-- enlace para ir al inicio y al fantasmita -->
         <div class="row d-flex justify-content-center">            
             <div class="enlace_inicio">
                 <a href="../Codigo_php/inicio.php"><ion-icon name="home-outline"></ion-icon></a>
@@ -31,25 +34,35 @@
             </div>
         </div>
 
+        <!-- la direccion de la empresa y para enviar un mensaje a un correo -->
         <div class="row d-flex justify-content-center">
+
+            <!-- direccion de la empresa -->
             <div class="direccion col text-center">
                 <p>Instituto Venezolano de INvestigaciones Científicas (IVIC)</p>
                 <p>Carr. Panamericana, Parroquia Macarao 1204, Miranda</p>
                 <p>Coordenadas: 10.398819984045886, -66.96520871534399</p>
             </div>
+
+            <!-- para enviar el correo -->
             <div class="mensaje col d-flex justify-content-center">
                 <form action="enviar.php" method="POST">
                     <div class="row d-flex justify-content-center">
                             <textarea class="asunto" name="asunto" placeholder="Asunto..." required></textarea>
                             <textarea class="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
                     </div><br>
-                    <div class="row d-flex justify-content-center">
-                        <button type="submit">Enviar</button>
+                    <div class="row justify-content-center formlog_row" align="center">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
+                            <button type="submit" class="enviar_correo btn btn-primary" name="texto">
+                                <a style="text-decoration: none; color: #fff;">Enviar</a>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
 
+        <!-- menu desplegable donde aparecen todas la redes sociales de la empresa -->
         <div class="row d-flex justify-content-center">
             <div class="menu">
                 <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>

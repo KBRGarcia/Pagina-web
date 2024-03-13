@@ -1,3 +1,15 @@
+/*-----------------------------AVRIABLES-----------------------------*/
+
+:root {
+    --bottom-color: rgba(143, 0, 0, 0.678);
+    --bottom-border: rgba(143, 0, 0, 0.678);
+    --bottom-hover: rgba(255, 7, 7, 0.685);
+    
+    
+}
+
+/*-----------------------------ESTILOS DE LA PAGINA-----------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +29,7 @@ body {
     background-position: center;
 }
 
+/*-----------------------------MENÚ DESPLEGABLE DE LAS REDES SOCIALES-----------------------------*/
 .menu {
     position: relative;
     width: 200px;
@@ -79,20 +92,19 @@ body {
     transform: rotate(315deg);
 }
 
-.titulo {
+/*-----------------------------ESTILOS GENERALES DEL INFO Y DEL CONTACTO-----------------------------*/
+.titulo {/*titulo principal de la pagina*/
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.3);
     padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    width: 100%;
+    width: auto;
+    text-align: center;
 }
 
-.enlace_inicio a {
+.enlace_inicio a { /*enlace de inicio y del fantasmita*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,11 +119,110 @@ body {
     
 }
 
-.enlace_inicio a:hover {
+.enlace_inicio a:hover { /*el hover del enlace del inicio y del fantasmita*/
     color: #ff1252;
 }
 
-.redes_sociales a {
+div .info_texto1, div .info_texto2, div .info_texto3 { /*los 3 div de la info de la empresa*/
+    color: rgb(255, 255, 255);
+    background:rgba(128, 128, 128, 0.8);
+    margin: 0.5%;
+    padding: 2.5%;
+    padding-left: 2.5;
+    padding-right: 2.5;
+}
+
+div .info_texto1, div .info_texto2 { /*los 2 primeros div de la info de la empresa*/
+    margin-top: 4%;
+}
+
+div .info_texto1 { /*el div de la izq de la info de la empresa*/
+    margin-left: 3%;
+}
+
+div .info_texto2 { /*el div de la der de la info de la empresa*/
+    margin-right: 3%;
+}
+
+div .info_texto3 { /*el div de abajo de la info de la empresa*/
+    margin-bottom: 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+div .info_texto1:hover { /*el div de la izq de la info de la empresa*/
+    animation: float 2s infinite alternate;
+    background:rgb(80, 79, 79);
+    color: white;
+}
+
+div .info_texto2:hover { /*el div de la der de la info de la empresa*/
+    animation: float 2s infinite alternate;
+    background:rgb(80, 79, 79);
+    color: white;
+}
+
+div .info_texto3:hover { /*el div de la izq de la info de la empresa*/
+    animation: float 2s infinite alternate;
+    background:rgb(80, 79, 79);
+    color: white;
+}
+
+.copyright { /*el copyright*/
+    color: rgb(233, 232, 232);
+    background:rgba(128, 128, 128, 0.3);
+    padding: 2.5%;
+    padding-left: 2.5;
+    padding-right: 2.5;
+    width: 100%;
+}
+
+div .mensaje, div .asunto { /*el asuto y el mensaje del correo*/
+    margin: 2%;
+    padding: 2.5%;
+}
+
+textarea .asunto { /*el cuadro de texto donde va el asunto del correo*/
+    width: 20em;
+    height: 4em;
+}
+
+textarea .mensaje{ /*el cuadro de texto donde va el mensaje del correo*/
+    width: 20em;
+    height: 7em;
+}
+ 
+div .direccion { /*el div de la direccion de nuestras oficinas*/
+    color: rgb(255, 255, 255);
+    background:rgba(128, 128, 128, 0.8);
+    margin: 3%;
+    padding: 2.5%;
+    padding-left: 2.5;
+    padding-right: 2.5;
+}
+
+div .direccion:hover { /*el hover del div de la direccion de nuestras oficinas*/
+    animation: float 2s infinite alternate;
+    background:rgb(80, 79, 79);
+    color: white;
+}
+
+.enviar_correo { /*estilos del boton de enviar del correo*/
+    align-items: center;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--bottom-color);
+    border-color: var(--bottom-border);
+}
+
+.enviar_correo:hover { /*hover del boton de enviar del correo*/
+    background-color: var(--bottom-hover);
+    border-color: var(--bottom-hover);
+}
+
+/*-----------------------------EN PROCESO, AL PARECER NO SE ENCUENTRA EN LA PAGINA LA REFERENCIA DE LA CLASE-----------------------------*/
+/* .redes_sociales a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,62 +249,5 @@ body {
     100% {
         transform: translateY(0);
     }
-}
-
-div .info_texto {
-    color: rgb(255, 255, 255);
-    background:rgba(128, 128, 128, 0.8);
-    margin: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    /* border-radius: 20px; */
-}
-
-div .info_texto:hover {
-    animation: float 2s infinite alternate;
-    background:rgb(80, 79, 79);
-    color: white;
-}
-
-.copyright {
-    color: rgb(233, 232, 232);
-    background:rgba(128, 128, 128, 0.3);
-    padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    width: 100%;
-}
-
-div .mensaje, div .asunto {
-    margin: 2%;
-    padding: 2.5%;
-}
-
-textarea .asunto {
-    width: 20em;
-    height: 4em;
-}
-
-textarea .mensaje{
-    width: 20em;
-    height: 7em;
-}
-
-div .direccion {
-    color: rgb(255, 255, 255);
-    background:rgba(128, 128, 128, 0.8);
-    margin: 3%;
-    padding: 2.5%;
-    padding-left: 2.5;
-    padding-right: 2.5;
-    /* border-radius: 20px; */
-}
-
-div .direccion:hover {
-    animation: float 2s infinite alternate;
-    background:rgb(80, 79, 79);
-    color: white;
-}
+} */
+/*-----------------------------EN PROCESO, AL PARECER NO SE ENCUENTRA EN LA PAGINA LA REFERENCIA DE LA CLASE-----------------------------*/
