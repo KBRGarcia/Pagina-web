@@ -182,16 +182,16 @@ div .mensaje, div .asunto { /*el asuto y el mensaje del correo*/
     padding: 2.5%;
 }
 
-textarea .asunto { /*el cuadro de texto donde va el asunto del correo*/
-    width: 20em;
-    height: 4em;
+div .textarea textarea .asunto { /*el cuadro de texto donde va el asunto del correo*/
+    width: 300px;
+    height: 100px;
 }
 
-textarea .mensaje{ /*el cuadro de texto donde va el mensaje del correo*/
-    width: 20em;
-    height: 7em;
+div .textarea textarea .mensaje{ /*el cuadro de texto donde va el mensaje del correo*/
+    width: 300px;
+    height: 200px;
 }
- 
+
 div .direccion { /*el div de la direccion de nuestras oficinas*/
     color: rgb(255, 255, 255);
     background:rgba(128, 128, 128, 0.8);
@@ -227,6 +227,11 @@ div .direccion:hover { /*el hover del div de la direccion de nuestras oficinas*/
 }
 
 .enlace_inicio a ion-icon {
+    width: 60%;
+    height: 60%;
+}
+
+li a ion-icon {
     width: 60%;
     height: 60%;
 }

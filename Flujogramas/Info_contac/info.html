@@ -66,10 +66,10 @@
 
             <!-- para enviar el correo -->
             <div class="mensaje col d-flex justify-content-center">
-                <form action="enviar.php" method="POST">
-                    <div class="row d-flex justify-content-center">
-                            <textarea class="asunto" name="asunto" placeholder="Asunto..." required></textarea>
-                            <textarea class="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <form id="formulario" action="form_email.php" method="POST">
+                    <div class="textarea row d-flex justify-content-center">
+                            <textarea style="width: 37.5em; height: 3.75em;" class="asunto" name="asunto" placeholder="Asunto..." required></textarea>
+                            <textarea style="width: 37.5em; height: 6.25em;" class="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
                     </div><br>
                     <div class="row justify-content-center formlog_row" align="center">
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 formlog_col">
@@ -81,6 +81,7 @@
                 </form>
             </div>
         </div>
+        <div id="mensaje"></div>
 
         <!-- menu desplegable donde aparecen todas la redes sociales de la empresa -->
         <div class="row d-flex justify-content-center">
@@ -135,7 +136,7 @@
     <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
 
     <!-- enlaces para usar los jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 
     <!-- enlace para usar bootstrap -->
@@ -143,5 +144,6 @@
 
     <!-- enlace para usar el JS propio -->
     <script src="./menu_redes.js"></script>
+    <script src="./form_email.js"></script>
 </body>
 </html>
